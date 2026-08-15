@@ -19,3 +19,6 @@ C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\bin\Debug\ne
 C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\bin\Debug\net10.0-windows\System.Management.dll
 C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\bin\Debug\net10.0-windows\runtimes\win\lib\net7.0\System.Management.dll
 C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\obj\Debug\net10.0-windows\Pharmate.E174AD2D.Up2Date
+C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\obj\Debug\net10.0-windows\Pharmatel.DesktopUi.sourcelink.json
+C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\obj\Debug\net10.0-windows\Pharmatel.DesktopUi.Presentation.Dashboard.resources
+C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\obj\Debug\net10.0-windows\Pharmatel.DesktopUi.Presentation.Register.resources

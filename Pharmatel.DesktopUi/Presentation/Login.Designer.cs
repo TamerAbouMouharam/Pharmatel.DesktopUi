@@ -91,17 +91,17 @@
             txtUsername.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtUsername.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtUsername.FocusedState.BorderColor = Color.FromArgb(10, 126, 164);
-            txtUsername.Font = new Font("Segoe UI", 12F);
+            txtUsername.Font = new Font("Segoe UI", 10F);
             txtUsername.ForeColor = Color.Black;
             txtUsername.HoverState.BorderColor = Color.FromArgb(10, 126, 164);
-            txtUsername.Location = new Point(147, 234);
-            txtUsername.Margin = new Padding(4, 6, 4, 6);
+            txtUsername.Location = new Point(120, 227);
+            txtUsername.Margin = new Padding(4, 7, 4, 7);
             txtUsername.Name = "txtUsername";
             txtUsername.PlaceholderText = "اسم المستخدم";
             txtUsername.RightToLeft = RightToLeft.No;
             txtUsername.SelectedText = "";
             txtUsername.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            txtUsername.Size = new Size(428, 79);
+            txtUsername.Size = new Size(482, 80);
             txtUsername.TabIndex = 1;
             txtUsername.TextAlign = HorizontalAlignment.Center;
             // 
@@ -117,18 +117,18 @@
             txtPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtPassword.FocusedState.BorderColor = Color.FromArgb(10, 126, 164);
-            txtPassword.Font = new Font("Segoe UI", 12F);
+            txtPassword.Font = new Font("Segoe UI", 10F);
             txtPassword.ForeColor = Color.Black;
             txtPassword.HoverState.BorderColor = Color.FromArgb(10, 126, 164);
-            txtPassword.Location = new Point(147, 348);
-            txtPassword.Margin = new Padding(4, 6, 4, 6);
+            txtPassword.Location = new Point(120, 358);
+            txtPassword.Margin = new Padding(4, 7, 4, 7);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
             txtPassword.PlaceholderText = "كلمة المرور";
             txtPassword.RightToLeft = RightToLeft.No;
             txtPassword.SelectedText = "";
             txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtPassword.Size = new Size(428, 79);
+            txtPassword.Size = new Size(482, 80);
             txtPassword.TabIndex = 2;
             txtPassword.TextAlign = HorizontalAlignment.Center;
             // 
@@ -153,7 +153,7 @@
             btnLogin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnLogin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnLogin.FillColor = Color.FromArgb(10, 126, 164);
-            btnLogin.Font = new Font("Segoe UI", 12F);
+            btnLogin.Font = new Font("Segoe UI", 10F);
             btnLogin.ForeColor = Color.White;
             btnLogin.HoverState.FillColor = Color.FromArgb(40, 156, 194);
             btnLogin.Location = new Point(249, 483);
@@ -162,6 +162,7 @@
             btnLogin.Size = new Size(225, 56);
             btnLogin.TabIndex = 4;
             btnLogin.Text = "تسجيل الدخول";
+            btnLogin.Click += btnLogin_Click;
             // 
             // btnSignup
             // 
@@ -174,7 +175,7 @@
             btnSignup.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnSignup.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnSignup.FillColor = Color.White;
-            btnSignup.Font = new Font("Segoe UI", 12F);
+            btnSignup.Font = new Font("Segoe UI", 10F);
             btnSignup.ForeColor = Color.FromArgb(10, 126, 164);
             btnSignup.HoverState.FillColor = Color.FromArgb(60, 176, 214);
             btnSignup.HoverState.ForeColor = Color.White;
@@ -184,6 +185,7 @@
             btnSignup.Size = new Size(225, 56);
             btnSignup.TabIndex = 5;
             btnSignup.Text = "إنشاء حساب";
+            btnSignup.Click += btnSignup_Click;
             // 
             // Login
             // 
@@ -205,6 +207,7 @@
             RightToLeftLayout = true;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Pharmatel";
+            FormClosing += Login_FormClosing;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -1,10 +1,14 @@
-﻿using System;
+﻿using Pharmatel.DesktopUi.Dto;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Text.Json;
+using System.Net.Http.Json;
+using System.Net;
 
 namespace Pharmatel.DesktopUi.Presentation
 {
@@ -18,6 +22,50 @@ namespace Pharmatel.DesktopUi.Presentation
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private async void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (txtUsername.Text.Length == 0 || txtPassword.Text.Length == 0)
+            {
+                MessageBox.Show("الرجاء التحقق من اسم المستخدم وكلمة المرور", "فشل تسجيل الدخول", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            LoginRequest request = new(txtUsername.Text, txtPassword.Text);
+
+            HttpRequestMessage message = new HttpRequestMessage(HttpMethod.Post, ApiDomain.Domain + "/auth/login");
+
+            message.Content = JsonContent.Create(request);
+
+            HttpClient client = new HttpClient();
+
+            HttpResponseMessage response = await client.SendAsync(message);
+
+            AuthResponse? authResponse = await response.Content.ReadFromJsonAsync<AuthResponse>();
+
+            if (response.StatusCode != HttpStatusCode.OK)
+            {
+                MessageBox.Show("الرجاء التحقق من اسم المستخدم وكلمة المرور", "فشل تسجيل الدخول", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            if (authResponse != null)
+            {
+                new Dashboard().Show();
+                this.Close();
+            }
+        }
+
+        private void btnSignup_Click(object sender, EventArgs e)
+        {
+            new Register().Show();
+            this.Close();
+        }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            this.Hide();
         }
     }
 }
