@@ -51,6 +51,7 @@ namespace Pharmatel.DesktopUi.Presentation
 
             if (authResponse != null)
             {
+                SessionInfo.AuthInfo = authResponse;
                 new Dashboard().Show();
                 this.Close();
             }
