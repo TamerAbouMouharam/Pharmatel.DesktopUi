@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Pharmatel.DesktopUi.Dto
 {
-    internal record PharmacyMedicine
+    internal record PharmacyMedicinePage
     (
         int PharmacyMedicineId,
         int MedicineId,

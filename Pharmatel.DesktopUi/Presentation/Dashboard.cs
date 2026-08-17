@@ -17,7 +17,7 @@ namespace Pharmatel.DesktopUi.Presentation
         private int AllMedicinesPageSize { get; set; } = 0;
         private bool IsLastPageAllMedicines { get; set; } = false;
 
-
+        private string AllMedicinesName { get; set; } = string.Empty;
 
         public Dashboard()
         {
@@ -60,7 +60,10 @@ namespace Pharmatel.DesktopUi.Presentation
 
         private async void GetMedicines()
         {
-            HttpRequestMessage message = new(HttpMethod.Get, ApiDomain.Domain + $"/medicines?page={AllMedicinesPage}");
+            btnPre.Enabled = true;
+            btnNext.Enabled = true;
+
+            HttpRequestMessage message = new(HttpMethod.Get, ApiDomain.Domain + $"/medicines?page={AllMedicinesPage}&name={AllMedicinesName}");
 
             HttpResponseMessage response = await new HttpClient().SendAsync(message);
 
@@ -79,6 +82,20 @@ namespace Pharmatel.DesktopUi.Presentation
             allMedicnesList.DataSource = Medicines;
 
             AllMedicinesPageSize = medicines.Size;
+
+            IsLastPageAllMedicines = medicines.Last;
+
+            if (IsLastPageAllMedicines)
+            {
+                btnNext.Enabled = false;
+            }
+
+            AllMedicinesPage = medicines.Page;
+
+            if (AllMedicinesPage == 0)
+            {
+                btnPre.Enabled = false;
+            }
 
             foreach (var row in allMedicnesList.Rows)
             {
@@ -114,9 +131,9 @@ namespace Pharmatel.DesktopUi.Presentation
         private void btnPre_Click(object sender, EventArgs e)
         {
 
-            if(AllMedicinesPage > 0)
+            if (AllMedicinesPage > 0)
             {
-                AllMedicinesPage--; 
+                AllMedicinesPage--;
             }
 
             GetMedicines();
@@ -127,6 +144,25 @@ namespace Pharmatel.DesktopUi.Presentation
             {
                 btnPre.Enabled = false;
             }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            AllMedicinesName = txtSearch.Text;
+
+            GetMedicines();
+        }
+
+        private void btnCancelSearch_Click(object sender, EventArgs e)
+        {
+            AllMedicinesName = string.Empty;
+
+            GetMedicines();
+        }
+
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            new MedcineInfo(Convert.ToInt32(allMedicnesList.SelectedRows[0].Cells["Id"].Value)).Show();
         }
     }
 }

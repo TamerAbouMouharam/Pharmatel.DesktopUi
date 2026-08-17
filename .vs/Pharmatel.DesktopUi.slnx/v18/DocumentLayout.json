@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|c:\\users\\media\\source\\repos\\pharmatel.desktopui\\pharmatel.desktopui\\presentation\\medcineinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|solutionrelative:pharmatel.desktopui\\presentation\\medcineinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|c:\\users\\media\\source\\repos\\pharmatel.desktopui\\pharmatel.desktopui\\presentation\\medcineinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|solutionrelative:pharmatel.desktopui\\presentation\\medcineinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|c:\\users\\media\\source\\repos\\pharmatel.desktopui\\pharmatel.desktopui\\dto\\medicinespage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|solutionrelative:pharmatel.desktopui\\dto\\medicinespage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|c:\\users\\media\\source\\repos\\pharmatel.desktopui\\pharmatel.desktopui\\presentation\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|solutionrelative:pharmatel.desktopui\\presentation\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,26 +35,64 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Dashboard.cs",
-              "DocumentMoniker": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Presentation\\Dashboard.cs",
-              "RelativeDocumentMoniker": "Pharmatel.DesktopUi\\Presentation\\Dashboard.cs",
-              "ToolTip": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Presentation\\Dashboard.cs",
-              "RelativeToolTip": "Pharmatel.DesktopUi\\Presentation\\Dashboard.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAADwvxMAAAAAAAAAAAAAAA==",
+              "Title": "MedcineInfo.cs",
+              "DocumentMoniker": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Presentation\\MedcineInfo.cs",
+              "RelativeDocumentMoniker": "Pharmatel.DesktopUi\\Presentation\\MedcineInfo.cs",
+              "ToolTip": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Presentation\\MedcineInfo.cs",
+              "RelativeToolTip": "Pharmatel.DesktopUi\\Presentation\\MedcineInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHEAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-16T19:38:29.958Z",
+              "WhenOpened": "2026-08-17T09:33:00.48Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "MedcineInfo.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Presentation\\MedcineInfo.cs",
+              "RelativeDocumentMoniker": "Pharmatel.DesktopUi\\Presentation\\MedcineInfo.cs",
+              "ToolTip": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Presentation\\MedcineInfo.cs [Design]",
+              "RelativeToolTip": "Pharmatel.DesktopUi\\Presentation\\MedcineInfo.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T09:32:58.451Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MedicinesPage.cs",
+              "DocumentMoniker": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Dto\\MedicinesPage.cs",
+              "RelativeDocumentMoniker": "Pharmatel.DesktopUi\\Dto\\MedicinesPage.cs",
+              "ToolTip": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Dto\\MedicinesPage.cs",
+              "RelativeToolTip": "Pharmatel.DesktopUi\\Dto\\MedicinesPage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T09:31:34.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dashboard.cs",
+              "DocumentMoniker": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Presentation\\Dashboard.cs",
+              "RelativeDocumentMoniker": "Pharmatel.DesktopUi\\Presentation\\Dashboard.cs",
+              "ToolTip": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Presentation\\Dashboard.cs",
+              "RelativeToolTip": "Pharmatel.DesktopUi\\Presentation\\Dashboard.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAtwKQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T09:31:28.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Dashboard.cs [Design]",
               "DocumentMoniker": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Presentation\\Dashboard.cs",
               "RelativeDocumentMoniker": "Pharmatel.DesktopUi\\Presentation\\Dashboard.cs",
               "ToolTip": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Presentation\\Dashboard.cs [Design]",
               "RelativeToolTip": "Pharmatel.DesktopUi\\Presentation\\Dashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-16T08:50:31.497Z",
+              "WhenOpened": "2026-08-17T09:23:46.228Z",
               "EditorCaption": " [Design]"
             }
           ]

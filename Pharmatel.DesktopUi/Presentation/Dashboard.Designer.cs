@@ -39,6 +39,8 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -51,8 +53,6 @@
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnExit = new Guna.UI2.WinForms.Guna2Button();
             exitElipse = new Guna.UI2.WinForms.Guna2Elipse(components);
             btnMax = new Guna.UI2.WinForms.Guna2Button();
@@ -71,9 +71,10 @@
             Factory = new DataGridViewTextBoxColumn();
             prescriptionPage = new TabPage();
             allMedicines = new TabPage();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            btnCancelSearch = new Guna.UI2.WinForms.Guna2Button();
+            btnShow = new Guna.UI2.WinForms.Guna2Button();
             btnSearch = new Guna.UI2.WinForms.Guna2Button();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             btnPre = new Guna.UI2.WinForms.Guna2CircleButton();
             btnNext = new Guna.UI2.WinForms.Guna2CircleButton();
             allMedicnesList = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -83,7 +84,7 @@
             medicineListElipse = new Guna.UI2.WinForms.Guna2Elipse(components);
             lblPharmacy = new Label();
             allMedicineElipse = new Guna.UI2.WinForms.Guna2Elipse(components);
-            btnCancelSearch = new Guna.UI2.WinForms.Guna2Button();
+            formDashboard = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             dashboardContent.SuspendLayout();
             medicinePage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)medicineList).BeginInit();
@@ -336,9 +337,9 @@
             // 
             allMedicines.BackColor = Color.White;
             allMedicines.Controls.Add(btnCancelSearch);
-            allMedicines.Controls.Add(guna2Button1);
+            allMedicines.Controls.Add(btnShow);
             allMedicines.Controls.Add(btnSearch);
-            allMedicines.Controls.Add(guna2TextBox1);
+            allMedicines.Controls.Add(txtSearch);
             allMedicines.Controls.Add(btnPre);
             allMedicines.Controls.Add(btnNext);
             allMedicines.Controls.Add(allMedicnesList);
@@ -349,24 +350,47 @@
             allMedicines.TabIndex = 2;
             allMedicines.Text = "جميع الأدوية";
             // 
-            // guna2Button1
+            // btnCancelSearch
             // 
-            guna2Button1.Anchor = AnchorStyles.Top;
-            guna2Button1.BorderRadius = 8;
-            guna2Button1.CustomizableEdges = customizableEdges9;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(10, 126, 164);
-            guna2Button1.Font = new Font("Segoe UI", 9F);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(230, 21);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Button1.Size = new Size(223, 70);
-            guna2Button1.TabIndex = 6;
-            guna2Button1.Text = "عرض معلومات الدواء المختار";
+            btnCancelSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnCancelSearch.BorderRadius = 8;
+            btnCancelSearch.CustomizableEdges = customizableEdges7;
+            btnCancelSearch.DisabledState.BorderColor = Color.DarkGray;
+            btnCancelSearch.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnCancelSearch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnCancelSearch.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCancelSearch.FillColor = Color.Gray;
+            btnCancelSearch.Font = new Font("Segoe UI", 9F);
+            btnCancelSearch.ForeColor = Color.White;
+            btnCancelSearch.HoverState.FillColor = Color.Silver;
+            btnCancelSearch.Location = new Point(670, 21);
+            btnCancelSearch.Name = "btnCancelSearch";
+            btnCancelSearch.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnCancelSearch.Size = new Size(80, 70);
+            btnCancelSearch.TabIndex = 7;
+            btnCancelSearch.Text = "إلغاء البحث";
+            btnCancelSearch.Click += btnCancelSearch_Click;
+            // 
+            // btnShow
+            // 
+            btnShow.Anchor = AnchorStyles.Top;
+            btnShow.BorderRadius = 8;
+            btnShow.CustomizableEdges = customizableEdges9;
+            btnShow.DisabledState.BorderColor = Color.DarkGray;
+            btnShow.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnShow.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnShow.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnShow.FillColor = Color.FromArgb(10, 126, 164);
+            btnShow.Font = new Font("Segoe UI", 9F);
+            btnShow.ForeColor = Color.White;
+            btnShow.HoverState.FillColor = Color.FromArgb(40, 156, 194);
+            btnShow.Location = new Point(230, 21);
+            btnShow.Name = "btnShow";
+            btnShow.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnShow.Size = new Size(223, 70);
+            btnShow.TabIndex = 6;
+            btnShow.Text = "عرض معلومات الدواء المختار";
+            btnShow.Click += btnShow_Click;
             // 
             // btnSearch
             // 
@@ -380,38 +404,40 @@
             btnSearch.FillColor = Color.FromArgb(10, 126, 164);
             btnSearch.Font = new Font("Segoe UI", 9F);
             btnSearch.ForeColor = Color.White;
+            btnSearch.HoverState.FillColor = Color.FromArgb(40, 156, 194);
             btnSearch.Location = new Point(756, 21);
             btnSearch.Name = "btnSearch";
             btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnSearch.Size = new Size(80, 70);
             btnSearch.TabIndex = 5;
             btnSearch.Text = "بحث";
+            btnSearch.Click += btnSearch_Click;
             // 
-            // guna2TextBox1
+            // txtSearch
             // 
-            guna2TextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2TextBox1.BorderRadius = 8;
-            guna2TextBox1.BorderThickness = 2;
-            guna2TextBox1.CustomizableEdges = customizableEdges13;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(10, 126, 164);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F);
-            guna2TextBox1.ForeColor = Color.Black;
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(842, 21);
-            guna2TextBox1.Margin = new Padding(3, 4, 3, 4);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PlaceholderText = "ابحث عن دواء";
-            guna2TextBox1.RightToLeft = RightToLeft.No;
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2TextBox1.Size = new Size(286, 70);
-            guna2TextBox1.TabIndex = 4;
-            guna2TextBox1.TextAlign = HorizontalAlignment.Center;
+            txtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtSearch.BorderRadius = 8;
+            txtSearch.BorderThickness = 2;
+            txtSearch.CustomizableEdges = customizableEdges13;
+            txtSearch.DefaultText = "";
+            txtSearch.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtSearch.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtSearch.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtSearch.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtSearch.FocusedState.BorderColor = Color.FromArgb(10, 126, 164);
+            txtSearch.Font = new Font("Segoe UI", 9F);
+            txtSearch.ForeColor = Color.Black;
+            txtSearch.HoverState.BorderColor = Color.FromArgb(10, 126, 164);
+            txtSearch.Location = new Point(842, 21);
+            txtSearch.Margin = new Padding(3, 4, 3, 4);
+            txtSearch.Name = "txtSearch";
+            txtSearch.PlaceholderText = "ابحث عن دواء";
+            txtSearch.RightToLeft = RightToLeft.No;
+            txtSearch.SelectedText = "";
+            txtSearch.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtSearch.Size = new Size(286, 70);
+            txtSearch.TabIndex = 4;
+            txtSearch.TextAlign = HorizontalAlignment.Center;
             // 
             // btnPre
             // 
@@ -422,6 +448,7 @@
             btnPre.FillColor = Color.FromArgb(10, 126, 164);
             btnPre.Font = new Font("Segoe UI", 9F);
             btnPre.ForeColor = Color.White;
+            btnPre.HoverState.FillColor = Color.FromArgb(40, 156, 194);
             btnPre.Location = new Point(117, 21);
             btnPre.Name = "btnPre";
             btnPre.RightToLeft = RightToLeft.No;
@@ -441,6 +468,7 @@
             btnNext.FillColor = Color.FromArgb(10, 126, 164);
             btnNext.Font = new Font("Segoe UI", 9F);
             btnNext.ForeColor = Color.White;
+            btnNext.HoverState.FillColor = Color.FromArgb(40, 156, 194);
             btnNext.Location = new Point(41, 21);
             btnNext.Name = "btnNext";
             btnNext.RightToLeft = RightToLeft.No;
@@ -560,24 +588,12 @@
             allMedicineElipse.BorderRadius = 8;
             allMedicineElipse.TargetControl = allMedicnesList;
             // 
-            // btnCancelSearch
+            // formDashboard
             // 
-            btnCancelSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnCancelSearch.BorderRadius = 8;
-            btnCancelSearch.CustomizableEdges = customizableEdges7;
-            btnCancelSearch.DisabledState.BorderColor = Color.DarkGray;
-            btnCancelSearch.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnCancelSearch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnCancelSearch.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnCancelSearch.FillColor = Color.Gray;
-            btnCancelSearch.Font = new Font("Segoe UI", 9F);
-            btnCancelSearch.ForeColor = Color.White;
-            btnCancelSearch.Location = new Point(670, 21);
-            btnCancelSearch.Name = "btnCancelSearch";
-            btnCancelSearch.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnCancelSearch.Size = new Size(80, 70);
-            btnCancelSearch.TabIndex = 7;
-            btnCancelSearch.Text = "إلغاء البحث";
+            formDashboard.BorderRadius = 20;
+            formDashboard.ContainerControl = this;
+            formDashboard.DockIndicatorTransparencyValue = 0.6D;
+            formDashboard.TransparentWhileDrag = true;
             // 
             // Dashboard
             // 
@@ -637,8 +653,9 @@
         private Guna.UI2.WinForms.Guna2CircleButton btnNext;
         private Guna.UI2.WinForms.Guna2CircleButton btnPre;
         private Guna.UI2.WinForms.Guna2Button btnSearch;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private Guna.UI2.WinForms.Guna2Button btnShow;
         private Guna.UI2.WinForms.Guna2Button btnCancelSearch;
+        private Guna.UI2.WinForms.Guna2BorderlessForm formDashboard;
     }
 }
