@@ -68,7 +68,6 @@
             formMedicineInfo.BorderRadius = 20;
             formMedicineInfo.ContainerControl = this;
             formMedicineInfo.DockIndicatorTransparencyValue = 0.6D;
-            formMedicineInfo.ResizeForm = false;
             formMedicineInfo.TransparentWhileDrag = true;
             // 
             // lblName
@@ -85,6 +84,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 20F);
             label2.ForeColor = Color.FromArgb(40, 156, 194);
@@ -97,6 +97,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20F);
             label1.ForeColor = Color.FromArgb(40, 156, 194);
@@ -109,6 +110,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 20F);
             label3.ForeColor = Color.FromArgb(40, 156, 194);
@@ -121,6 +123,7 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 20F);
             label4.ForeColor = Color.FromArgb(40, 156, 194);
@@ -133,6 +136,7 @@
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.Right;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 20F);
             label5.ForeColor = Color.FromArgb(40, 156, 194);
@@ -145,6 +149,7 @@
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.Right;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 20F);
             label6.ForeColor = Color.FromArgb(40, 156, 194);
@@ -157,6 +162,7 @@
             // 
             // label7
             // 
+            label7.Anchor = AnchorStyles.Right;
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 20F);
             label7.ForeColor = Color.FromArgb(40, 156, 194);
@@ -169,6 +175,7 @@
             // 
             // label8
             // 
+            label8.Anchor = AnchorStyles.Right;
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 20F);
             label8.ForeColor = Color.FromArgb(40, 156, 194);
@@ -181,6 +188,7 @@
             // 
             // label9
             // 
+            label9.Anchor = AnchorStyles.Right;
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 20F);
             label9.ForeColor = Color.FromArgb(40, 156, 194);
@@ -193,6 +201,7 @@
             // 
             // label10
             // 
+            label10.Anchor = AnchorStyles.Right;
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 20F);
             label10.ForeColor = Color.FromArgb(40, 156, 194);
@@ -313,7 +322,6 @@
             // 
             // txtQuantity
             // 
-            txtQuantity.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtQuantity.BorderRadius = 8;
             txtQuantity.BorderThickness = 2;
             txtQuantity.CustomizableEdges = customizableEdges5;
