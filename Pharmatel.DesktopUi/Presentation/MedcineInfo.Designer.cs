@@ -77,6 +77,7 @@
             lblName.ForeColor = Color.FromArgb(10, 126, 164);
             lblName.Location = new Point(363, 83);
             lblName.Name = "lblName";
+            lblName.RightToLeft = RightToLeft.No;
             lblName.Size = new Size(228, 67);
             lblName.TabIndex = 0;
             lblName.Text = "lblName";
@@ -219,6 +220,7 @@
             lblSellPrice.ForeColor = Color.FromArgb(40, 156, 194);
             lblSellPrice.Location = new Point(59, 765);
             lblSellPrice.Name = "lblSellPrice";
+            lblSellPrice.RightToLeft = RightToLeft.No;
             lblSellPrice.Size = new Size(189, 46);
             lblSellPrice.TabIndex = 19;
             lblSellPrice.Text = "سعر المبيع: ";
@@ -231,6 +233,7 @@
             lblBuyPrice.ForeColor = Color.FromArgb(40, 156, 194);
             lblBuyPrice.Location = new Point(59, 695);
             lblBuyPrice.Name = "lblBuyPrice";
+            lblBuyPrice.RightToLeft = RightToLeft.No;
             lblBuyPrice.Size = new Size(187, 46);
             lblBuyPrice.TabIndex = 18;
             lblBuyPrice.Text = "سعر الشراء: ";
@@ -243,6 +246,7 @@
             lbldDrugComposition.ForeColor = Color.FromArgb(40, 156, 194);
             lbldDrugComposition.Location = new Point(59, 625);
             lbldDrugComposition.Name = "lbldDrugComposition";
+            lbldDrugComposition.RightToLeft = RightToLeft.No;
             lbldDrugComposition.Size = new Size(245, 46);
             lbldDrugComposition.TabIndex = 17;
             lbldDrugComposition.Text = "التركيبة الدوائية: ";
@@ -255,6 +259,7 @@
             lblFactory.ForeColor = Color.FromArgb(40, 156, 194);
             lblFactory.Location = new Point(59, 555);
             lblFactory.Name = "lblFactory";
+            lblFactory.RightToLeft = RightToLeft.No;
             lblFactory.Size = new Size(141, 46);
             lblFactory.TabIndex = 16;
             lblFactory.Text = "المصنع: ";
@@ -267,6 +272,7 @@
             lblCapacityMetric.ForeColor = Color.FromArgb(40, 156, 194);
             lblCapacityMetric.Location = new Point(59, 485);
             lblCapacityMetric.Name = "lblCapacityMetric";
+            lblCapacityMetric.RightToLeft = RightToLeft.No;
             lblCapacityMetric.Size = new Size(218, 46);
             lblCapacityMetric.TabIndex = 15;
             lblCapacityMetric.Text = "مقياس السعة:";
@@ -279,6 +285,7 @@
             lblCapacity.ForeColor = Color.FromArgb(40, 156, 194);
             lblCapacity.Location = new Point(59, 415);
             lblCapacity.Name = "lblCapacity";
+            lblCapacity.RightToLeft = RightToLeft.No;
             lblCapacity.Size = new Size(121, 46);
             lblCapacity.TabIndex = 14;
             lblCapacity.Text = "السعة: ";
@@ -291,6 +298,7 @@
             lblBox.ForeColor = Color.FromArgb(40, 156, 194);
             lblBox.Location = new Point(59, 345);
             lblBox.Name = "lblBox";
+            lblBox.RightToLeft = RightToLeft.No;
             lblBox.Size = new Size(106, 46);
             lblBox.TabIndex = 13;
             lblBox.Text = "العلبة:";
@@ -303,6 +311,7 @@
             lblPharmaceuticalForm.ForeColor = Color.FromArgb(40, 156, 194);
             lblPharmaceuticalForm.Location = new Point(59, 275);
             lblPharmaceuticalForm.Name = "lblPharmaceuticalForm";
+            lblPharmaceuticalForm.RightToLeft = RightToLeft.No;
             lblPharmaceuticalForm.Size = new Size(235, 46);
             lblPharmaceuticalForm.TabIndex = 12;
             lblPharmaceuticalForm.Text = "الشكل الدوائي: ";
@@ -315,6 +324,7 @@
             lblId.ForeColor = Color.FromArgb(40, 156, 194);
             lblId.Location = new Point(59, 205);
             lblId.Name = "lblId";
+            lblId.RightToLeft = RightToLeft.No;
             lblId.Size = new Size(207, 46);
             lblId.TabIndex = 11;
             lblId.Text = "معرّف الدواء: ";

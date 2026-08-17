@@ -14,15 +14,16 @@ namespace Pharmatel.DesktopUi.Presentation
     {
         private int MedicineId { get; set; }
         private int Quantity { get; set; }
-
         private int PharmacyMedicineId { get; set; }
 
+        Dashboard Parent;
 
-
-        public MedcineInfo(int medicineId)
+        public MedcineInfo(int medicineId, Dashboard parent)
         {
             InitializeComponent();
+
             MedicineId = medicineId;
+            Parent = parent;
 
             GetMedicine();
         }
@@ -55,7 +56,7 @@ namespace Pharmatel.DesktopUi.Presentation
 
             HttpResponseMessage responseQuantity = await new HttpClient().SendAsync(messageQuantity);
 
-            PharmacyMedicines? pharmacyMedicines = await responseQuantity.Content.ReadFromJsonAsync<PharmacyMedicines>();
+            PharmacyMedicinesPage? pharmacyMedicines = await responseQuantity.Content.ReadFromJsonAsync<PharmacyMedicinesPage>();
 
             var pharmacy_medicine = pharmacyMedicines!.Content.FirstOrDefault(pm => pm.MedicineId == MedicineId);
 
@@ -118,6 +119,9 @@ namespace Pharmatel.DesktopUi.Presentation
                     }
                 }
             }
+
+            Parent.GetMedicines();
+            Parent.GetPharmacyMedicines();
 
             this.Close();
         }

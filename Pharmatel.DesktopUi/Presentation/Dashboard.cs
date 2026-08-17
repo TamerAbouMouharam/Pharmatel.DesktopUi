@@ -16,17 +16,31 @@ namespace Pharmatel.DesktopUi.Presentation
         private int AllMedicinesPage { get; set; } = 0;
         private int AllMedicinesPageSize { get; set; } = 0;
         private bool IsLastPageAllMedicines { get; set; } = false;
-
         private string AllMedicinesName { get; set; } = string.Empty;
+
+        private int PharmacyMedicinesPage { get; set; } = 0;
+        private int PharmacyMedicinesPageSize { get; set; } = 0;
+        private bool IsLastPagePharmacyMedicines { get; set; } = false;
+        private string PharmacyMedicinesName { get; set; } = string.Empty;
 
         public Dashboard()
         {
             InitializeComponent();
+
             GetMedicines();
+            GetPharmacyMedicines();
+
             btnPre.Enabled = false;
-            foreach (var row in allMedicnesList.Rows)
+            btnPrePharm.Enabled = false;
+
+            foreach (var row in allMedicinesList.Rows)
             {
-                ((DataGridViewRow)row).Height = allMedicnesList.Size.Height / AllMedicinesPageSize;
+                ((DataGridViewRow)row).Height = allMedicinesList.Size.Height / AllMedicinesPageSize;
+            }
+
+            foreach (var row in medicineList.Rows)
+            {
+                ((DataGridViewRow)row).Height = medicineList.Size.Height / PharmacyMedicinesPageSize;
             }
         }
 
@@ -58,7 +72,7 @@ namespace Pharmatel.DesktopUi.Presentation
             this.lblPharmacy.Text = pharmacy!.Name;
         }
 
-        private async void GetMedicines()
+        public async void GetMedicines()
         {
             btnPre.Enabled = true;
             btnNext.Enabled = true;
@@ -70,16 +84,16 @@ namespace Pharmatel.DesktopUi.Presentation
             MedicinesPage? medicines = await response.Content.ReadFromJsonAsync<MedicinesPage>();
 
             Medicines = new();
-            Medicines.Columns.Add("Id");
-            Medicines.Columns.Add("Name");
-            Medicines.Columns.Add("Buy Price");
-            Medicines.Columns.Add("Sell Price");
-            Medicines.Columns.Add("Drug Composition");
-            Medicines.Columns.Add("Factory");
+            Medicines.Columns.Add("المعرف");
+            Medicines.Columns.Add("الاسم");
+            Medicines.Columns.Add("سعر الشراء");
+            Medicines.Columns.Add("سعر البيع");
+            Medicines.Columns.Add("التركيبة الدوائية");
+            Medicines.Columns.Add("المصنع");
 
             medicines!.Content.ForEach(m => Medicines.Rows.Add(m.Id, m.Name, m.BuyPrice, m.SellPrice, m.DrugComposition, m.Factory));
 
-            allMedicnesList.DataSource = Medicines;
+            allMedicinesList.DataSource = Medicines;
 
             AllMedicinesPageSize = medicines.Size;
 
@@ -97,17 +111,17 @@ namespace Pharmatel.DesktopUi.Presentation
                 btnPre.Enabled = false;
             }
 
-            foreach (var row in allMedicnesList.Rows)
+            foreach (var row in allMedicinesList.Rows)
             {
-                ((DataGridViewRow)row).Height = allMedicnesList.Size.Height / AllMedicinesPageSize;
+                ((DataGridViewRow)row).Height = allMedicinesList.Size.Height / AllMedicinesPageSize;
             }
         }
 
         private void allMedicnesList_SizeChanged(object sender, EventArgs e)
         {
-            foreach (var row in allMedicnesList.Rows)
+            foreach (var row in allMedicinesList.Rows)
             {
-                ((DataGridViewRow)row).Height = allMedicnesList.Size.Height / AllMedicinesPageSize;
+                ((DataGridViewRow)row).Height = allMedicinesList.Size.Height / AllMedicinesPageSize;
             }
         }
 
@@ -162,7 +176,112 @@ namespace Pharmatel.DesktopUi.Presentation
 
         private void btnShow_Click(object sender, EventArgs e)
         {
-            new MedcineInfo(Convert.ToInt32(allMedicnesList.SelectedRows[0].Cells["Id"].Value)).Show();
+            new MedcineInfo(Convert.ToInt32(allMedicinesList.SelectedRows[0].Cells["المعرف"].Value), this).Show();
+        }
+
+        public async void GetPharmacyMedicines()
+        {
+            btnPrePharm.Enabled = true;
+            btnNextPharm.Enabled = true;
+
+
+            HttpRequestMessage message = new(HttpMethod.Get, ApiDomain.Domain + $"/pharmacies/{SessionInfo.AuthInfo!.PharmacyId}/medicines?page={PharmacyMedicinesPage}&name={PharmacyMedicinesName}");
+
+            HttpResponseMessage response = await new HttpClient().SendAsync(message);
+
+            PharmacyMedicinesPage? medicines = await response.Content.ReadFromJsonAsync<PharmacyMedicinesPage>();
+
+            Medicines = new();
+            Medicines.Columns.Add("المعرف");
+            Medicines.Columns.Add("المعرف العام");
+            Medicines.Columns.Add("الاسم");
+            Medicines.Columns.Add("الكمية");
+
+            medicines!.Content.ForEach(m => Medicines.Rows.Add(m.PharmacyMedicineId, m.MedicineId, m.MedicineName, m.Quantity));
+
+            medicineList.DataSource = Medicines;
+
+            PharmacyMedicinesPageSize = medicines.Size;
+
+            IsLastPagePharmacyMedicines = medicines.Last;
+
+            if (IsLastPagePharmacyMedicines)
+            {
+                btnNextPharm.Enabled = false;
+            }
+
+            PharmacyMedicinesPage = medicines.Page;
+
+            if (PharmacyMedicinesPage == 0)
+            {
+                btnPrePharm.Enabled = false;
+            }
+
+            foreach (var row in medicineList.Rows)
+            {
+                ((DataGridViewRow)row).Height = medicineList.Size.Height / PharmacyMedicinesPageSize;
+            }
+        }
+
+        private void btnShowPharm_Click(object sender, EventArgs e)
+        {
+            new MedcineInfo(Convert.ToInt32(medicineList.SelectedRows[0].Cells["المعرف العام"].Value), this).Show();
+        }
+
+        private void btnNextPharm_Click(object sender, EventArgs e)
+        {
+            if (!IsLastPagePharmacyMedicines)
+            {
+                PharmacyMedicinesPage++;
+            }
+
+            GetPharmacyMedicines();
+
+            btnPrePharm.Enabled = true;
+
+            if (IsLastPagePharmacyMedicines)
+            {
+                btnNextPharm.Enabled = false;
+            }
+        }
+
+        private void btnPrePharm_Click(object sender, EventArgs e)
+        {
+            if (PharmacyMedicinesPage > 0)
+            {
+                PharmacyMedicinesPage--;
+            }
+
+            GetPharmacyMedicines();
+
+            btnNextPharm.Enabled = true;
+
+            if (PharmacyMedicinesPage == 0)
+            {
+                btnPrePharm.Enabled = false;
+            }
+        }
+
+        private void medicineList_SizeChanged(object sender, EventArgs e)
+        {
+            foreach (var row in medicineList.Rows)
+            {
+                ((DataGridViewRow)row).Height = medicineList.Size.Height / PharmacyMedicinesPageSize;
+            }
+        }
+
+        private void btnSearchPharm_Click(object sender, EventArgs e)
+        {
+            PharmacyMedicinesName = txtSearchPharm.Text;
+
+            GetPharmacyMedicines();
+        }
+
+        private void btnCancelSearchPharm_Click(object sender, EventArgs e)
+        {
+            PharmacyMedicinesName = string.Empty;
+
+            GetPharmacyMedicines();
         }
     }
 }

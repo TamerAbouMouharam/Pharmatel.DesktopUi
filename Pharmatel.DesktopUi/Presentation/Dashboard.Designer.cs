@@ -35,10 +35,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -49,6 +45,20 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
@@ -62,13 +72,13 @@
             dashboardElipse = new Guna.UI2.WinForms.Guna2Elipse(components);
             dashboardContent = new Guna.UI2.WinForms.Guna2TabControl();
             medicinePage = new TabPage();
+            btnShowPharm = new Guna.UI2.WinForms.Guna2Button();
+            btnCancelSearchPharm = new Guna.UI2.WinForms.Guna2Button();
+            btnSearchPharm = new Guna.UI2.WinForms.Guna2Button();
+            txtSearchPharm = new Guna.UI2.WinForms.Guna2TextBox();
+            btnPrePharm = new Guna.UI2.WinForms.Guna2CircleButton();
+            btnNextPharm = new Guna.UI2.WinForms.Guna2CircleButton();
             medicineList = new Guna.UI2.WinForms.Guna2DataGridView();
-            Id = new DataGridViewTextBoxColumn();
-            MedicineName = new DataGridViewTextBoxColumn();
-            Quantity = new DataGridViewTextBoxColumn();
-            BuyPrice = new DataGridViewTextBoxColumn();
-            SellPrice = new DataGridViewTextBoxColumn();
-            Factory = new DataGridViewTextBoxColumn();
             prescriptionPage = new TabPage();
             allMedicines = new TabPage();
             btnCancelSearch = new Guna.UI2.WinForms.Guna2Button();
@@ -77,9 +87,8 @@
             txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             btnPre = new Guna.UI2.WinForms.Guna2CircleButton();
             btnNext = new Guna.UI2.WinForms.Guna2CircleButton();
-            allMedicnesList = new Guna.UI2.WinForms.Guna2DataGridView();
+            allMedicinesList = new Guna.UI2.WinForms.Guna2DataGridView();
             contentElipse = new Guna.UI2.WinForms.Guna2Elipse(components);
-            medicinePageElipse = new Guna.UI2.WinForms.Guna2Elipse(components);
             prescriptionPageElipse = new Guna.UI2.WinForms.Guna2Elipse(components);
             medicineListElipse = new Guna.UI2.WinForms.Guna2Elipse(components);
             lblPharmacy = new Label();
@@ -89,7 +98,7 @@
             medicinePage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)medicineList).BeginInit();
             allMedicines.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)allMedicnesList).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)allMedicinesList).BeginInit();
             SuspendLayout();
             // 
             // btnExit
@@ -204,6 +213,12 @@
             // medicinePage
             // 
             medicinePage.BackColor = Color.White;
+            medicinePage.Controls.Add(btnShowPharm);
+            medicinePage.Controls.Add(btnCancelSearchPharm);
+            medicinePage.Controls.Add(btnSearchPharm);
+            medicinePage.Controls.Add(txtSearchPharm);
+            medicinePage.Controls.Add(btnPrePharm);
+            medicinePage.Controls.Add(btnNextPharm);
             medicinePage.Controls.Add(medicineList);
             medicinePage.Location = new Point(4, 4);
             medicinePage.Name = "medicinePage";
@@ -211,6 +226,135 @@
             medicinePage.Size = new Size(1134, 786);
             medicinePage.TabIndex = 0;
             medicinePage.Text = "الأدوية";
+            // 
+            // btnShowPharm
+            // 
+            btnShowPharm.Anchor = AnchorStyles.Top;
+            btnShowPharm.BorderRadius = 8;
+            btnShowPharm.CustomizableEdges = customizableEdges7;
+            btnShowPharm.DisabledState.BorderColor = Color.DarkGray;
+            btnShowPharm.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnShowPharm.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnShowPharm.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnShowPharm.FillColor = Color.FromArgb(10, 126, 164);
+            btnShowPharm.Font = new Font("Segoe UI", 9F);
+            btnShowPharm.ForeColor = Color.White;
+            btnShowPharm.HoverState.FillColor = Color.FromArgb(40, 156, 194);
+            btnShowPharm.Location = new Point(230, 21);
+            btnShowPharm.Name = "btnShowPharm";
+            btnShowPharm.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnShowPharm.Size = new Size(223, 70);
+            btnShowPharm.TabIndex = 11;
+            btnShowPharm.Text = "عرض معلومات الدواء المختار";
+            btnShowPharm.Click += btnShowPharm_Click;
+            // 
+            // btnCancelSearchPharm
+            // 
+            btnCancelSearchPharm.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnCancelSearchPharm.BorderRadius = 8;
+            btnCancelSearchPharm.CustomizableEdges = customizableEdges9;
+            btnCancelSearchPharm.DisabledState.BorderColor = Color.DarkGray;
+            btnCancelSearchPharm.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnCancelSearchPharm.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnCancelSearchPharm.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCancelSearchPharm.FillColor = Color.Gray;
+            btnCancelSearchPharm.Font = new Font("Segoe UI", 9F);
+            btnCancelSearchPharm.ForeColor = Color.White;
+            btnCancelSearchPharm.HoverState.FillColor = Color.Silver;
+            btnCancelSearchPharm.Location = new Point(670, 21);
+            btnCancelSearchPharm.Name = "btnCancelSearchPharm";
+            btnCancelSearchPharm.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnCancelSearchPharm.Size = new Size(80, 70);
+            btnCancelSearchPharm.TabIndex = 10;
+            btnCancelSearchPharm.Text = "إلغاء البحث";
+            btnCancelSearchPharm.Click += btnCancelSearchPharm_Click;
+            // 
+            // btnSearchPharm
+            // 
+            btnSearchPharm.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSearchPharm.BorderRadius = 8;
+            btnSearchPharm.CustomizableEdges = customizableEdges11;
+            btnSearchPharm.DisabledState.BorderColor = Color.DarkGray;
+            btnSearchPharm.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSearchPharm.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSearchPharm.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSearchPharm.FillColor = Color.FromArgb(10, 126, 164);
+            btnSearchPharm.Font = new Font("Segoe UI", 9F);
+            btnSearchPharm.ForeColor = Color.White;
+            btnSearchPharm.HoverState.FillColor = Color.FromArgb(40, 156, 194);
+            btnSearchPharm.Location = new Point(756, 21);
+            btnSearchPharm.Name = "btnSearchPharm";
+            btnSearchPharm.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnSearchPharm.Size = new Size(80, 70);
+            btnSearchPharm.TabIndex = 9;
+            btnSearchPharm.Text = "بحث";
+            btnSearchPharm.Click += btnSearchPharm_Click;
+            // 
+            // txtSearchPharm
+            // 
+            txtSearchPharm.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtSearchPharm.BorderRadius = 8;
+            txtSearchPharm.BorderThickness = 2;
+            txtSearchPharm.CustomizableEdges = customizableEdges13;
+            txtSearchPharm.DefaultText = "";
+            txtSearchPharm.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtSearchPharm.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtSearchPharm.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtSearchPharm.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtSearchPharm.FocusedState.BorderColor = Color.FromArgb(10, 126, 164);
+            txtSearchPharm.Font = new Font("Segoe UI", 9F);
+            txtSearchPharm.ForeColor = Color.Black;
+            txtSearchPharm.HoverState.BorderColor = Color.FromArgb(10, 126, 164);
+            txtSearchPharm.Location = new Point(842, 21);
+            txtSearchPharm.Margin = new Padding(3, 4, 3, 4);
+            txtSearchPharm.Name = "txtSearchPharm";
+            txtSearchPharm.PlaceholderText = "ابحث عن دواء";
+            txtSearchPharm.RightToLeft = RightToLeft.No;
+            txtSearchPharm.SelectedText = "";
+            txtSearchPharm.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtSearchPharm.Size = new Size(286, 70);
+            txtSearchPharm.TabIndex = 8;
+            txtSearchPharm.TextAlign = HorizontalAlignment.Center;
+            // 
+            // btnPrePharm
+            // 
+            btnPrePharm.DisabledState.BorderColor = Color.DarkGray;
+            btnPrePharm.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnPrePharm.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnPrePharm.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnPrePharm.FillColor = Color.FromArgb(10, 126, 164);
+            btnPrePharm.Font = new Font("Segoe UI", 9F);
+            btnPrePharm.ForeColor = Color.White;
+            btnPrePharm.HoverState.FillColor = Color.FromArgb(40, 156, 194);
+            btnPrePharm.Location = new Point(117, 21);
+            btnPrePharm.Name = "btnPrePharm";
+            btnPrePharm.RightToLeft = RightToLeft.No;
+            btnPrePharm.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            btnPrePharm.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            btnPrePharm.Size = new Size(70, 70);
+            btnPrePharm.TabIndex = 5;
+            btnPrePharm.Text = ">";
+            btnPrePharm.Click += btnPrePharm_Click;
+            // 
+            // btnNextPharm
+            // 
+            btnNextPharm.DisabledState.BorderColor = Color.DarkGray;
+            btnNextPharm.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnNextPharm.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnNextPharm.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnNextPharm.FillColor = Color.FromArgb(10, 126, 164);
+            btnNextPharm.Font = new Font("Segoe UI", 9F);
+            btnNextPharm.ForeColor = Color.White;
+            btnNextPharm.HoverState.FillColor = Color.FromArgb(40, 156, 194);
+            btnNextPharm.Location = new Point(41, 21);
+            btnNextPharm.Name = "btnNextPharm";
+            btnNextPharm.RightToLeft = RightToLeft.No;
+            btnNextPharm.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnNextPharm.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            btnNextPharm.Size = new Size(70, 70);
+            btnNextPharm.TabIndex = 4;
+            btnNextPharm.Text = "<";
+            btnNextPharm.Click += btnNextPharm_Click;
             // 
             // medicineList
             // 
@@ -223,20 +367,19 @@
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(40, 156, 194);
             dataGridViewCellStyle1.SelectionForeColor = Color.White;
             medicineList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            medicineList.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            medicineList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             medicineList.BackgroundColor = Color.FromArgb(234, 234, 234);
             medicineList.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(0, 116, 154);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
             dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 116, 154);
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             medicineList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            medicineList.ColumnHeadersHeight = 4;
+            medicineList.ColumnHeadersHeight = 22;
             medicineList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            medicineList.Columns.AddRange(new DataGridViewColumn[] { Id, MedicineName, Quantity, BuyPrice, SellPrice, Factory });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.Silver;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -246,9 +389,11 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             medicineList.DefaultCellStyle = dataGridViewCellStyle3;
             medicineList.GridColor = Color.LightGray;
-            medicineList.Location = new Point(3, 114);
+            medicineList.Location = new Point(3, 111);
+            medicineList.MultiSelect = false;
             medicineList.Name = "medicineList";
             medicineList.ReadOnly = true;
+            medicineList.RightToLeft = RightToLeft.Yes;
             medicineList.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = Color.Silver;
@@ -260,8 +405,8 @@
             medicineList.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             medicineList.RowHeadersVisible = false;
             medicineList.RowHeadersWidth = 51;
-            medicineList.Size = new Size(1128, 669);
-            medicineList.TabIndex = 0;
+            medicineList.Size = new Size(1128, 672);
+            medicineList.TabIndex = 2;
             medicineList.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(217, 217, 217);
             medicineList.ThemeStyle.AlternatingRowsStyle.Font = new Font("Segoe UI", 9F);
             medicineList.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.FromArgb(10, 126, 164);
@@ -271,7 +416,7 @@
             medicineList.ThemeStyle.GridColor = Color.LightGray;
             medicineList.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(0, 116, 154);
             medicineList.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            medicineList.ThemeStyle.HeaderStyle.Height = 4;
+            medicineList.ThemeStyle.HeaderStyle.Height = 22;
             medicineList.ThemeStyle.ReadOnly = true;
             medicineList.ThemeStyle.RowsStyle.BackColor = Color.Silver;
             medicineList.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.None;
@@ -280,48 +425,7 @@
             medicineList.ThemeStyle.RowsStyle.Height = 29;
             medicineList.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(40, 156, 194);
             medicineList.ThemeStyle.RowsStyle.SelectionForeColor = Color.White;
-            // 
-            // Id
-            // 
-            Id.HeaderText = "Id";
-            Id.MinimumWidth = 6;
-            Id.Name = "Id";
-            Id.ReadOnly = true;
-            // 
-            // MedicineName
-            // 
-            MedicineName.HeaderText = "MedicineName";
-            MedicineName.MinimumWidth = 6;
-            MedicineName.Name = "MedicineName";
-            MedicineName.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            Quantity.HeaderText = "Quantity";
-            Quantity.MinimumWidth = 6;
-            Quantity.Name = "Quantity";
-            Quantity.ReadOnly = true;
-            // 
-            // BuyPrice
-            // 
-            BuyPrice.HeaderText = "BuyPrice";
-            BuyPrice.MinimumWidth = 6;
-            BuyPrice.Name = "BuyPrice";
-            BuyPrice.ReadOnly = true;
-            // 
-            // SellPrice
-            // 
-            SellPrice.HeaderText = "SellPrice";
-            SellPrice.MinimumWidth = 6;
-            SellPrice.Name = "SellPrice";
-            SellPrice.ReadOnly = true;
-            // 
-            // Factory
-            // 
-            Factory.HeaderText = "Factory";
-            Factory.MinimumWidth = 6;
-            Factory.Name = "Factory";
-            Factory.ReadOnly = true;
+            medicineList.SizeChanged += medicineList_SizeChanged;
             // 
             // prescriptionPage
             // 
@@ -342,7 +446,7 @@
             allMedicines.Controls.Add(txtSearch);
             allMedicines.Controls.Add(btnPre);
             allMedicines.Controls.Add(btnNext);
-            allMedicines.Controls.Add(allMedicnesList);
+            allMedicines.Controls.Add(allMedicinesList);
             allMedicines.Location = new Point(4, 4);
             allMedicines.Name = "allMedicines";
             allMedicines.Padding = new Padding(3);
@@ -354,7 +458,7 @@
             // 
             btnCancelSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnCancelSearch.BorderRadius = 8;
-            btnCancelSearch.CustomizableEdges = customizableEdges7;
+            btnCancelSearch.CustomizableEdges = customizableEdges17;
             btnCancelSearch.DisabledState.BorderColor = Color.DarkGray;
             btnCancelSearch.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCancelSearch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -365,7 +469,7 @@
             btnCancelSearch.HoverState.FillColor = Color.Silver;
             btnCancelSearch.Location = new Point(670, 21);
             btnCancelSearch.Name = "btnCancelSearch";
-            btnCancelSearch.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnCancelSearch.ShadowDecoration.CustomizableEdges = customizableEdges18;
             btnCancelSearch.Size = new Size(80, 70);
             btnCancelSearch.TabIndex = 7;
             btnCancelSearch.Text = "إلغاء البحث";
@@ -375,7 +479,7 @@
             // 
             btnShow.Anchor = AnchorStyles.Top;
             btnShow.BorderRadius = 8;
-            btnShow.CustomizableEdges = customizableEdges9;
+            btnShow.CustomizableEdges = customizableEdges19;
             btnShow.DisabledState.BorderColor = Color.DarkGray;
             btnShow.DisabledState.CustomBorderColor = Color.DarkGray;
             btnShow.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -386,7 +490,7 @@
             btnShow.HoverState.FillColor = Color.FromArgb(40, 156, 194);
             btnShow.Location = new Point(230, 21);
             btnShow.Name = "btnShow";
-            btnShow.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnShow.ShadowDecoration.CustomizableEdges = customizableEdges20;
             btnShow.Size = new Size(223, 70);
             btnShow.TabIndex = 6;
             btnShow.Text = "عرض معلومات الدواء المختار";
@@ -396,7 +500,7 @@
             // 
             btnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnSearch.BorderRadius = 8;
-            btnSearch.CustomizableEdges = customizableEdges11;
+            btnSearch.CustomizableEdges = customizableEdges21;
             btnSearch.DisabledState.BorderColor = Color.DarkGray;
             btnSearch.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSearch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -407,7 +511,7 @@
             btnSearch.HoverState.FillColor = Color.FromArgb(40, 156, 194);
             btnSearch.Location = new Point(756, 21);
             btnSearch.Name = "btnSearch";
-            btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges22;
             btnSearch.Size = new Size(80, 70);
             btnSearch.TabIndex = 5;
             btnSearch.Text = "بحث";
@@ -418,7 +522,7 @@
             txtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtSearch.BorderRadius = 8;
             txtSearch.BorderThickness = 2;
-            txtSearch.CustomizableEdges = customizableEdges13;
+            txtSearch.CustomizableEdges = customizableEdges23;
             txtSearch.DefaultText = "";
             txtSearch.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSearch.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -434,7 +538,7 @@
             txtSearch.PlaceholderText = "ابحث عن دواء";
             txtSearch.RightToLeft = RightToLeft.No;
             txtSearch.SelectedText = "";
-            txtSearch.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtSearch.ShadowDecoration.CustomizableEdges = customizableEdges24;
             txtSearch.Size = new Size(286, 70);
             txtSearch.TabIndex = 4;
             txtSearch.TextAlign = HorizontalAlignment.Center;
@@ -452,7 +556,7 @@
             btnPre.Location = new Point(117, 21);
             btnPre.Name = "btnPre";
             btnPre.RightToLeft = RightToLeft.No;
-            btnPre.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            btnPre.ShadowDecoration.CustomizableEdges = customizableEdges25;
             btnPre.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             btnPre.Size = new Size(70, 70);
             btnPre.TabIndex = 3;
@@ -472,27 +576,27 @@
             btnNext.Location = new Point(41, 21);
             btnNext.Name = "btnNext";
             btnNext.RightToLeft = RightToLeft.No;
-            btnNext.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnNext.ShadowDecoration.CustomizableEdges = customizableEdges26;
             btnNext.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             btnNext.Size = new Size(70, 70);
             btnNext.TabIndex = 2;
             btnNext.Text = "<";
             btnNext.Click += btnNext_Click;
             // 
-            // allMedicnesList
+            // allMedicinesList
             // 
-            allMedicnesList.AllowUserToAddRows = false;
-            allMedicnesList.AllowUserToDeleteRows = false;
-            allMedicnesList.AllowUserToResizeRows = false;
+            allMedicinesList.AllowUserToAddRows = false;
+            allMedicinesList.AllowUserToDeleteRows = false;
+            allMedicinesList.AllowUserToResizeRows = false;
             dataGridViewCellStyle5.BackColor = Color.FromArgb(217, 217, 217);
             dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
             dataGridViewCellStyle5.ForeColor = Color.FromArgb(10, 126, 164);
             dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(40, 156, 194);
             dataGridViewCellStyle5.SelectionForeColor = Color.White;
-            allMedicnesList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            allMedicnesList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            allMedicnesList.BackgroundColor = Color.FromArgb(234, 234, 234);
-            allMedicnesList.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            allMedicinesList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            allMedicinesList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            allMedicinesList.BackgroundColor = Color.FromArgb(234, 234, 234);
+            allMedicinesList.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = Color.FromArgb(0, 116, 154);
             dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
@@ -500,9 +604,9 @@
             dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(0, 116, 154);
             dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            allMedicnesList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            allMedicnesList.ColumnHeadersHeight = 22;
-            allMedicnesList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            allMedicinesList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            allMedicinesList.ColumnHeadersHeight = 22;
+            allMedicinesList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = Color.Silver;
             dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F);
@@ -510,14 +614,14 @@
             dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(40, 156, 194);
             dataGridViewCellStyle7.SelectionForeColor = Color.White;
             dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
-            allMedicnesList.DefaultCellStyle = dataGridViewCellStyle7;
-            allMedicnesList.GridColor = Color.LightGray;
-            allMedicnesList.Location = new Point(3, 114);
-            allMedicnesList.MultiSelect = false;
-            allMedicnesList.Name = "allMedicnesList";
-            allMedicnesList.ReadOnly = true;
-            allMedicnesList.RightToLeft = RightToLeft.Yes;
-            allMedicnesList.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            allMedicinesList.DefaultCellStyle = dataGridViewCellStyle7;
+            allMedicinesList.GridColor = Color.LightGray;
+            allMedicinesList.Location = new Point(3, 114);
+            allMedicinesList.MultiSelect = false;
+            allMedicinesList.Name = "allMedicinesList";
+            allMedicinesList.ReadOnly = true;
+            allMedicinesList.RightToLeft = RightToLeft.Yes;
+            allMedicinesList.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = Color.Silver;
             dataGridViewCellStyle8.Font = new Font("Segoe UI", 9F);
@@ -525,40 +629,35 @@
             dataGridViewCellStyle8.SelectionBackColor = Color.Silver;
             dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            allMedicnesList.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            allMedicnesList.RowHeadersVisible = false;
-            allMedicnesList.RowHeadersWidth = 51;
-            allMedicnesList.Size = new Size(1128, 669);
-            allMedicnesList.TabIndex = 1;
-            allMedicnesList.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(217, 217, 217);
-            allMedicnesList.ThemeStyle.AlternatingRowsStyle.Font = new Font("Segoe UI", 9F);
-            allMedicnesList.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.FromArgb(10, 126, 164);
-            allMedicnesList.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.FromArgb(40, 156, 194);
-            allMedicnesList.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.White;
-            allMedicnesList.ThemeStyle.BackColor = Color.FromArgb(234, 234, 234);
-            allMedicnesList.ThemeStyle.GridColor = Color.LightGray;
-            allMedicnesList.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(0, 116, 154);
-            allMedicnesList.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            allMedicnesList.ThemeStyle.HeaderStyle.Height = 22;
-            allMedicnesList.ThemeStyle.ReadOnly = true;
-            allMedicnesList.ThemeStyle.RowsStyle.BackColor = Color.Silver;
-            allMedicnesList.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.None;
-            allMedicnesList.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            allMedicnesList.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(10, 126, 164);
-            allMedicnesList.ThemeStyle.RowsStyle.Height = 29;
-            allMedicnesList.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(40, 156, 194);
-            allMedicnesList.ThemeStyle.RowsStyle.SelectionForeColor = Color.White;
-            allMedicnesList.SizeChanged += allMedicnesList_SizeChanged;
+            allMedicinesList.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            allMedicinesList.RowHeadersVisible = false;
+            allMedicinesList.RowHeadersWidth = 51;
+            allMedicinesList.Size = new Size(1128, 669);
+            allMedicinesList.TabIndex = 1;
+            allMedicinesList.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(217, 217, 217);
+            allMedicinesList.ThemeStyle.AlternatingRowsStyle.Font = new Font("Segoe UI", 9F);
+            allMedicinesList.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.FromArgb(10, 126, 164);
+            allMedicinesList.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.FromArgb(40, 156, 194);
+            allMedicinesList.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.White;
+            allMedicinesList.ThemeStyle.BackColor = Color.FromArgb(234, 234, 234);
+            allMedicinesList.ThemeStyle.GridColor = Color.LightGray;
+            allMedicinesList.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(0, 116, 154);
+            allMedicinesList.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            allMedicinesList.ThemeStyle.HeaderStyle.Height = 22;
+            allMedicinesList.ThemeStyle.ReadOnly = true;
+            allMedicinesList.ThemeStyle.RowsStyle.BackColor = Color.Silver;
+            allMedicinesList.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.None;
+            allMedicinesList.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            allMedicinesList.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(10, 126, 164);
+            allMedicinesList.ThemeStyle.RowsStyle.Height = 29;
+            allMedicinesList.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(40, 156, 194);
+            allMedicinesList.ThemeStyle.RowsStyle.SelectionForeColor = Color.White;
+            allMedicinesList.SizeChanged += allMedicnesList_SizeChanged;
             // 
             // contentElipse
             // 
             contentElipse.BorderRadius = 8;
             contentElipse.TargetControl = dashboardContent;
-            // 
-            // medicinePageElipse
-            // 
-            medicinePageElipse.BorderRadius = 8;
-            medicinePageElipse.TargetControl = medicinePage;
             // 
             // prescriptionPageElipse
             // 
@@ -586,7 +685,7 @@
             // allMedicineElipse
             // 
             allMedicineElipse.BorderRadius = 8;
-            allMedicineElipse.TargetControl = allMedicnesList;
+            allMedicineElipse.TargetControl = allMedicinesList;
             // 
             // formDashboard
             // 
@@ -618,7 +717,7 @@
             medicinePage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)medicineList).EndInit();
             allMedicines.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)allMedicnesList).EndInit();
+            ((System.ComponentModel.ISupportInitialize)allMedicinesList).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -636,19 +735,11 @@
         private TabPage medicinePage;
         private TabPage prescriptionPage;
         private Guna.UI2.WinForms.Guna2Elipse contentElipse;
-        private Guna.UI2.WinForms.Guna2Elipse medicinePageElipse;
         private Guna.UI2.WinForms.Guna2Elipse prescriptionPageElipse;
         private Guna.UI2.WinForms.Guna2Elipse medicineListElipse;
         private Label lblPharmacy;
-        private Guna.UI2.WinForms.Guna2DataGridView medicineList;
-        private DataGridViewTextBoxColumn Id;
-        private DataGridViewTextBoxColumn MedicineName;
-        private DataGridViewTextBoxColumn Quantity;
-        private DataGridViewTextBoxColumn BuyPrice;
-        private DataGridViewTextBoxColumn SellPrice;
-        private DataGridViewTextBoxColumn Factory;
         private TabPage allMedicines;
-        private Guna.UI2.WinForms.Guna2DataGridView allMedicnesList;
+        private Guna.UI2.WinForms.Guna2DataGridView allMedicinesList;
         private Guna.UI2.WinForms.Guna2Elipse allMedicineElipse;
         private Guna.UI2.WinForms.Guna2CircleButton btnNext;
         private Guna.UI2.WinForms.Guna2CircleButton btnPre;
@@ -657,5 +748,12 @@
         private Guna.UI2.WinForms.Guna2Button btnShow;
         private Guna.UI2.WinForms.Guna2Button btnCancelSearch;
         private Guna.UI2.WinForms.Guna2BorderlessForm formDashboard;
+        private Guna.UI2.WinForms.Guna2DataGridView medicineList;
+        private Guna.UI2.WinForms.Guna2CircleButton btnPrePharm;
+        private Guna.UI2.WinForms.Guna2CircleButton btnNextPharm;
+        private Guna.UI2.WinForms.Guna2Button btnCancelSearchPharm;
+        private Guna.UI2.WinForms.Guna2Button btnSearchPharm;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearchPharm;
+        private Guna.UI2.WinForms.Guna2Button btnShowPharm;
     }
 }
