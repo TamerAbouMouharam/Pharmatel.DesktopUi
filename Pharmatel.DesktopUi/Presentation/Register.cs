@@ -1,13 +1,7 @@
 ﻿using Pharmatel.DesktopUi.Dto;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Net.Http.Json;
-using System.Text;
-using System.Windows.Forms;
 using System.Net;
+using System.Net.Http.Json;
+using Windows.Devices.Geolocation;
 
 namespace Pharmatel.DesktopUi.Presentation
 {
@@ -37,7 +31,9 @@ namespace Pharmatel.DesktopUi.Presentation
                 return;
             }
 
-            RegisterRequest request = new(txtUsername.Text, txtPassword.Text, "PHARMACY", txtEmail.Text, txtPhone.Text, txtPharmacy.Text, txtPharmacist.Text, 0, 0);
+            (double lat, double lng) = await GetLocation();
+
+            RegisterRequest request = new(txtUsername.Text, txtPassword.Text, "PHARMACY", txtEmail.Text, txtPhone.Text, txtPharmacy.Text, txtPharmacist.Text, lat, lng);
 
             HttpRequestMessage message = new(HttpMethod.Post, ApiDomain.Domain + "/auth/register");
 
@@ -45,7 +41,7 @@ namespace Pharmatel.DesktopUi.Presentation
 
             HttpResponseMessage response = await new HttpClient().SendAsync(message);
 
-            if(response.StatusCode != HttpStatusCode.Created)
+            if (response.StatusCode != HttpStatusCode.Created)
             {
                 MessageBox.Show("تحقق من البيانات المدخلة و ادخل اسم مستخدم فريد", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -58,5 +54,28 @@ namespace Pharmatel.DesktopUi.Presentation
             new Dashboard().Show();
             this.Close();
         }
+
+        async Task<(double lat, double lng)> GetLocation()
+        {
+            var accessStatus = await Geolocator.RequestAccessAsync();
+            if (accessStatus != GeolocationAccessStatus.Allowed)
+            {
+                //Console.WriteLine("Location access denied or restricted.");
+                return (0, 0);
+            }
+
+            // Create a geolocator with desired accuracy
+            var geolocator = new Geolocator { DesiredAccuracyInMeters = 100 };
+
+            //Console.WriteLine("Getting current location...");
+            Geoposition pos = await geolocator.GetGeopositionAsync();
+
+            // Output coordinates
+
+            return (pos.Coordinate.Point.Position.Latitude, pos.Coordinate.Point.Position.Longitude);
+        }
+
+
     }
 }
+

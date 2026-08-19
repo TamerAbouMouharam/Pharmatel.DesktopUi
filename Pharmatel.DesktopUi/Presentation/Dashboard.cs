@@ -18,10 +18,26 @@ namespace Pharmatel.DesktopUi.Presentation
         private bool IsLastPageAllMedicines { get; set; } = false;
         private string AllMedicinesName { get; set; } = string.Empty;
 
+
+        private DataTable PharmacyMedicines { get; set; } = new DataTable();
         private int PharmacyMedicinesPage { get; set; } = 0;
         private int PharmacyMedicinesPageSize { get; set; } = 0;
         private bool IsLastPagePharmacyMedicines { get; set; } = false;
         private string PharmacyMedicinesName { get; set; } = string.Empty;
+
+
+        private DataTable Prescriptions { get; set; } = new DataTable();
+        private int PrescriptionsPage { get; set; } = 0;
+        private int PrescriptionsPageSize { get; set; } = 0;
+        private bool IsLastPagePrescriptions { get; set; } = false;
+        private string PrescriptionsName { get; set; } = string.Empty;
+
+        public void ResetPages()
+        {
+            AllMedicinesPage = 0;
+            PharmacyMedicinesPage = 0;
+            PrescriptionsPage = 0;
+        }
 
         public Dashboard()
         {
@@ -29,18 +45,25 @@ namespace Pharmatel.DesktopUi.Presentation
 
             GetMedicines();
             GetPharmacyMedicines();
+            GetPrescriptions();
 
             btnPre.Enabled = false;
             btnPrePharm.Enabled = false;
+            btnPrePres.Enabled = false;
 
             foreach (var row in allMedicinesList.Rows)
             {
-                ((DataGridViewRow)row).Height = allMedicinesList.Size.Height / AllMedicinesPageSize;
+                ((DataGridViewRow)row).Height = allMedicinesList.Height / allMedicinesList.Rows.Count;
             }
 
             foreach (var row in medicineList.Rows)
             {
-                ((DataGridViewRow)row).Height = medicineList.Size.Height / PharmacyMedicinesPageSize;
+                ((DataGridViewRow)row).Height = medicineList.Height / medicineList.Rows.Count;
+            }
+
+            foreach (var row in prescriptionList.Rows)
+            {
+                ((DataGridViewRow)row).Height = prescriptionList.Height / prescriptionList.Rows.Count;
             }
         }
 
@@ -113,7 +136,7 @@ namespace Pharmatel.DesktopUi.Presentation
 
             foreach (var row in allMedicinesList.Rows)
             {
-                ((DataGridViewRow)row).Height = allMedicinesList.Size.Height / AllMedicinesPageSize;
+                ((DataGridViewRow)row).Height = allMedicinesList.Height / allMedicinesList.Rows.Count;
             }
         }
 
@@ -121,7 +144,7 @@ namespace Pharmatel.DesktopUi.Presentation
         {
             foreach (var row in allMedicinesList.Rows)
             {
-                ((DataGridViewRow)row).Height = allMedicinesList.Size.Height / AllMedicinesPageSize;
+                ((DataGridViewRow)row).Height = allMedicinesList.Height / allMedicinesList.Rows.Count;
             }
         }
 
@@ -164,11 +187,15 @@ namespace Pharmatel.DesktopUi.Presentation
         {
             AllMedicinesName = txtSearch.Text;
 
+            AllMedicinesPage = 0;
+
             GetMedicines();
         }
 
         private void btnCancelSearch_Click(object sender, EventArgs e)
         {
+            txtSearch.Text = string.Empty;
+
             AllMedicinesName = string.Empty;
 
             GetMedicines();
@@ -185,21 +212,21 @@ namespace Pharmatel.DesktopUi.Presentation
             btnNextPharm.Enabled = true;
 
 
-            HttpRequestMessage message = new(HttpMethod.Get, ApiDomain.Domain + $"/pharmacies/{SessionInfo.AuthInfo!.PharmacyId}/medicines?page={PharmacyMedicinesPage}&name={PharmacyMedicinesName}");
+            HttpRequestMessage message = new(HttpMethod.Get, ApiDomain.Domain + $"/pharmacies/{SessionInfo.AuthInfo!.PharmacyId}/medicines?page={PharmacyMedicinesPage}&medicineName={PharmacyMedicinesName}");
 
             HttpResponseMessage response = await new HttpClient().SendAsync(message);
 
             PharmacyMedicinesPage? medicines = await response.Content.ReadFromJsonAsync<PharmacyMedicinesPage>();
 
-            Medicines = new();
-            Medicines.Columns.Add("المعرف");
-            Medicines.Columns.Add("المعرف العام");
-            Medicines.Columns.Add("الاسم");
-            Medicines.Columns.Add("الكمية");
+            PharmacyMedicines = new();
+            PharmacyMedicines.Columns.Add("المعرف");
+            PharmacyMedicines.Columns.Add("المعرف العام");
+            PharmacyMedicines.Columns.Add("الاسم");
+            PharmacyMedicines.Columns.Add("الكمية");
 
-            medicines!.Content.ForEach(m => Medicines.Rows.Add(m.PharmacyMedicineId, m.MedicineId, m.MedicineName, m.Quantity));
+            medicines!.Content.ForEach(m => PharmacyMedicines.Rows.Add(m.PharmacyMedicineId, m.MedicineId, m.MedicineName, m.Quantity));
 
-            medicineList.DataSource = Medicines;
+            medicineList.DataSource = PharmacyMedicines;
 
             PharmacyMedicinesPageSize = medicines.Size;
 
@@ -219,7 +246,7 @@ namespace Pharmatel.DesktopUi.Presentation
 
             foreach (var row in medicineList.Rows)
             {
-                ((DataGridViewRow)row).Height = medicineList.Size.Height / PharmacyMedicinesPageSize;
+                ((DataGridViewRow)row).Height = medicineList.Height / medicineList.Rows.Count;
             }
         }
 
@@ -266,7 +293,7 @@ namespace Pharmatel.DesktopUi.Presentation
         {
             foreach (var row in medicineList.Rows)
             {
-                ((DataGridViewRow)row).Height = medicineList.Size.Height / PharmacyMedicinesPageSize;
+                ((DataGridViewRow)row).Height = medicineList.Size.Height / medicineList.RowCount;
             }
         }
 
@@ -274,14 +301,149 @@ namespace Pharmatel.DesktopUi.Presentation
         {
             PharmacyMedicinesName = txtSearchPharm.Text;
 
+            PharmacyMedicinesPage = 0;
+
             GetPharmacyMedicines();
         }
 
         private void btnCancelSearchPharm_Click(object sender, EventArgs e)
         {
+            txtSearchPharm.Text = string.Empty;
+
             PharmacyMedicinesName = string.Empty;
 
+            PharmacyMedicinesPage = 0;
+
             GetPharmacyMedicines();
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        public async void GetPrescriptions()
+        {
+            btnPrePres.Enabled = true;
+            btnNextPres.Enabled = true;
+
+            HttpRequestMessage message = new(HttpMethod.Get, ApiDomain.Domain + $"/prescriptionsForPharmacist?page={PrescriptionsPage}&medicineName={PrescriptionsName}");
+
+            message.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", SessionInfo.AuthInfo!.Token);
+
+            HttpResponseMessage response = await new HttpClient().SendAsync(message);
+
+            PrescriptionPage? prescriptions = await response.Content.ReadFromJsonAsync<PrescriptionPage>();
+
+            Prescriptions = new();
+            Prescriptions.Columns.Add("المعرف");
+            Prescriptions.Columns.Add("معرف المريض");
+            Prescriptions.Columns.Add("اسم الدواء");
+            Prescriptions.Columns.Add("الجرعة");
+            Prescriptions.Columns.Add("التكرار");
+            Prescriptions.Columns.Add("تاريخ البدء");
+
+            prescriptions!.Content.ForEach(p => Prescriptions.Rows.Add(p.Id, p.PatientId, p.MedicineName, p.Dose, p.Frequency, p.StartDate));
+
+            prescriptionList.DataSource = Prescriptions;
+
+            PrescriptionsPageSize = prescriptions.Size;
+
+            IsLastPagePrescriptions = prescriptions.Last;
+
+            if (IsLastPagePrescriptions)
+            {
+                btnNextPres.Enabled = false;
+            }
+
+            PrescriptionsPage = prescriptions.Page;
+
+            if (PrescriptionsPage == 0)
+            {
+                btnPrePres.Enabled = false;
+            }
+
+            foreach (var row in prescriptionList.Rows)
+            {
+                ((DataGridViewRow)row).Height = prescriptionList.Height / prescriptionList.Rows.Count;
+            }
+        }
+
+        private void btnAddPrescription_Click(object sender, EventArgs e)
+        {
+            new PrescriptionInfo(this).Show();
+        }
+
+        private void btnShowPrescription_Click(object sender, EventArgs e)
+        {
+            new PrescriptionDetails(prescriptionList.SelectedRows[0].Cells["المعرف"].Value.ToString(), this).Show();
+        }
+
+        private void btnNextPres_Click(object sender, EventArgs e)
+        {
+            if (!IsLastPagePrescriptions)
+            {
+                PrescriptionsPage++;
+            }
+
+            GetPrescriptions();
+
+            btnPrePres.Enabled = true;
+
+            if (IsLastPagePrescriptions)
+            {
+                btnNextPres.Enabled = false;
+            }
+        }
+
+        private void btnPrePres_Click(object sender, EventArgs e)
+        {
+            if (PrescriptionsPage > 0)
+            {
+                PrescriptionsPage--;
+            }
+
+            GetPrescriptions();
+
+            btnNextPres.Enabled = true;
+
+            if (PrescriptionsPage == 0)
+            {
+                btnPrePres.Enabled = false;
+            }
+        }
+
+        private void prescriptionList_SizeChanged(object sender, EventArgs e)
+        {
+            foreach (var row in prescriptionList.Rows)
+            {
+                ((DataGridViewRow)row).Height = prescriptionList.Height / prescriptionList.Rows.Count;
+            }
+        }
+
+        private void btnSearchPres_Click(object sender, EventArgs e)
+        {
+            PrescriptionsName = txtSearchPres.Text;
+
+            PrescriptionsPage = 0;
+
+            GetPrescriptions();
+        }
+
+        private void btnCancelSearchPres_Click(object sender, EventArgs e)
+        {
+            txtSearchPres.Text = string.Empty;
+
+            PrescriptionsName = txtSearchPres.Text;
+
+            PrescriptionsPage = 0;
+
+            GetPrescriptions();
+        }
+
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+            new UploadForm(this).Show();
         }
     }
 }

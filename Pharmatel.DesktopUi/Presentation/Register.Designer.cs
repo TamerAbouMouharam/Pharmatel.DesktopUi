@@ -175,7 +175,7 @@
             txtConfirmPassword.Margin = new Padding(4, 7, 4, 7);
             txtConfirmPassword.Name = "txtConfirmPassword";
             txtConfirmPassword.PasswordChar = '*';
-            txtConfirmPassword.PlaceholderText = "تأكيد كلمو المرور";
+            txtConfirmPassword.PlaceholderText = "تأكيد كلمة المرور";
             txtConfirmPassword.RightToLeft = RightToLeft.No;
             txtConfirmPassword.SelectedText = "";
             txtConfirmPassword.ShadowDecoration.CustomizableEdges = customizableEdges14;

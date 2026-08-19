@@ -10,7 +10,16 @@
     <Compile Update="Presentation\MedcineInfo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Presentation\PrescriptionDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\PrescriptionInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Presentation\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\UploadForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

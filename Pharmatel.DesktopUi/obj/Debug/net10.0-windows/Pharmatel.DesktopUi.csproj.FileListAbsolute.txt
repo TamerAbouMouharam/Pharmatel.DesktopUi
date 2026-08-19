@@ -23,3 +23,7 @@ C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\obj\Debug\ne
 C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\obj\Debug\net10.0-windows\Pharmatel.DesktopUi.Presentation.Dashboard.resources
 C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\obj\Debug\net10.0-windows\Pharmatel.DesktopUi.Presentation.Register.resources
 C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\obj\Debug\net10.0-windows\Pharmatel.DesktopUi.Presentation.MedcineInfo.resources
+C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\obj\Debug\net10.0-windows\Pharmatel.DesktopUi.Presentation.PrescriptionInfo.resources
+C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\obj\Debug\net10.0-windows\Pharmatel.DesktopUi.Presentation.PrescriptionDetails.resources
+C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\bin\Debug\net10.0-windows\CsvHelper.dll
+C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\obj\Debug\net10.0-windows\Pharmatel.DesktopUi.Presentation.UploadForm.resources

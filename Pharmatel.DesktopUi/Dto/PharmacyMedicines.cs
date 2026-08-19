@@ -10,5 +10,7 @@ namespace Pharmatel.DesktopUi.Dto
         int MedicineId,
         string MedicineName,
         int Quantity
+        //double Price,
+        //bool Available
     );
 }
