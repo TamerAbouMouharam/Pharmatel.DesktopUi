@@ -41,6 +41,25 @@
           }
         }
       },
+      "Microsoft.Web.WebView2/1.0.4129.50": {
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/WebView2Loader.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "1.0.4129.50"
+          },
+          "runtimes/win-x64/native/WebView2Loader.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "1.0.4129.50"
+          },
+          "runtimes/win-x86/native/WebView2Loader.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "1.0.4129.50"
+          }
+        }
+      },
       "System.Management/7.0.0": {
         "runtime": {
           "lib/net7.0/System.Management.dll": {
@@ -87,6 +106,13 @@
       "sha512": "sha512-fIY3+UIuuxGAPQACC+DRrRS3kkcrdaKGWvjrWoa5AVkjfXjQci34EYr2iMlWchvmzptEiGKE3sqZYmnBvj9JVw==",
       "path": "guna.ui2.winforms/2.0.4.8",
       "hashPath": "guna.ui2.winforms.2.0.4.8.nupkg.sha512"
+    },
+    "Microsoft.Web.WebView2/1.0.4129.50": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BuJC70c7SCl8wlvojLZbc/E5ONmGyG3fhAMmpftCpKerxae//TxgKOTELRK2QRD7m7jigNFQRf6cfVT3ZiIQoQ==",
+      "path": "microsoft.web.webview2/1.0.4129.50",
+      "hashPath": "microsoft.web.webview2.1.0.4129.50.nupkg.sha512"
     },
     "System.Management/7.0.0": {
       "type": "package",

@@ -31,6 +31,8 @@
             components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -59,6 +61,7 @@
             txtPharmacist = new Guna.UI2.WinForms.Guna2TextBox();
             txtPharmacy = new Guna.UI2.WinForms.Guna2TextBox();
             btnRegister = new Guna.UI2.WinForms.Guna2Button();
+            btnGeo = new Guna.UI2.WinForms.Guna2Button();
             SuspendLayout();
             // 
             // exitElipse
@@ -108,7 +111,7 @@
             txtUsername.Anchor = AnchorStyles.None;
             txtUsername.BorderRadius = 8;
             txtUsername.BorderThickness = 2;
-            txtUsername.CustomizableEdges = customizableEdges17;
+            txtUsername.CustomizableEdges = customizableEdges19;
             txtUsername.DefaultText = "";
             txtUsername.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtUsername.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -124,7 +127,7 @@
             txtUsername.PlaceholderText = "اسم المستخدم";
             txtUsername.RightToLeft = RightToLeft.No;
             txtUsername.SelectedText = "";
-            txtUsername.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            txtUsername.ShadowDecoration.CustomizableEdges = customizableEdges20;
             txtUsername.Size = new Size(482, 80);
             txtUsername.TabIndex = 5;
             txtUsername.TextAlign = HorizontalAlignment.Center;
@@ -134,7 +137,7 @@
             txtPassword.Anchor = AnchorStyles.None;
             txtPassword.BorderRadius = 8;
             txtPassword.BorderThickness = 2;
-            txtPassword.CustomizableEdges = customizableEdges15;
+            txtPassword.CustomizableEdges = customizableEdges17;
             txtPassword.DefaultText = "";
             txtPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -151,7 +154,7 @@
             txtPassword.PlaceholderText = "كلمة المرور";
             txtPassword.RightToLeft = RightToLeft.No;
             txtPassword.SelectedText = "";
-            txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges18;
             txtPassword.Size = new Size(482, 80);
             txtPassword.TabIndex = 6;
             txtPassword.TextAlign = HorizontalAlignment.Center;
@@ -161,7 +164,7 @@
             txtConfirmPassword.Anchor = AnchorStyles.None;
             txtConfirmPassword.BorderRadius = 8;
             txtConfirmPassword.BorderThickness = 2;
-            txtConfirmPassword.CustomizableEdges = customizableEdges13;
+            txtConfirmPassword.CustomizableEdges = customizableEdges15;
             txtConfirmPassword.DefaultText = "";
             txtConfirmPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtConfirmPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -178,7 +181,7 @@
             txtConfirmPassword.PlaceholderText = "تأكيد كلمة المرور";
             txtConfirmPassword.RightToLeft = RightToLeft.No;
             txtConfirmPassword.SelectedText = "";
-            txtConfirmPassword.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtConfirmPassword.ShadowDecoration.CustomizableEdges = customizableEdges16;
             txtConfirmPassword.Size = new Size(482, 80);
             txtConfirmPassword.TabIndex = 7;
             txtConfirmPassword.TextAlign = HorizontalAlignment.Center;
@@ -188,7 +191,7 @@
             txtEmail.Anchor = AnchorStyles.None;
             txtEmail.BorderRadius = 8;
             txtEmail.BorderThickness = 2;
-            txtEmail.CustomizableEdges = customizableEdges11;
+            txtEmail.CustomizableEdges = customizableEdges13;
             txtEmail.DefaultText = "";
             txtEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -204,7 +207,7 @@
             txtEmail.PlaceholderText = "البريد الالكتروني";
             txtEmail.RightToLeft = RightToLeft.No;
             txtEmail.SelectedText = "";
-            txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges14;
             txtEmail.Size = new Size(482, 80);
             txtEmail.TabIndex = 8;
             txtEmail.TextAlign = HorizontalAlignment.Center;
@@ -214,7 +217,7 @@
             txtPhone.Anchor = AnchorStyles.None;
             txtPhone.BorderRadius = 8;
             txtPhone.BorderThickness = 2;
-            txtPhone.CustomizableEdges = customizableEdges9;
+            txtPhone.CustomizableEdges = customizableEdges11;
             txtPhone.DefaultText = "";
             txtPhone.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPhone.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -230,7 +233,7 @@
             txtPhone.PlaceholderText = "رقم الهاتف";
             txtPhone.RightToLeft = RightToLeft.No;
             txtPhone.SelectedText = "";
-            txtPhone.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtPhone.ShadowDecoration.CustomizableEdges = customizableEdges12;
             txtPhone.Size = new Size(482, 80);
             txtPhone.TabIndex = 9;
             txtPhone.TextAlign = HorizontalAlignment.Center;
@@ -240,7 +243,7 @@
             txtPharmacist.Anchor = AnchorStyles.None;
             txtPharmacist.BorderRadius = 8;
             txtPharmacist.BorderThickness = 2;
-            txtPharmacist.CustomizableEdges = customizableEdges7;
+            txtPharmacist.CustomizableEdges = customizableEdges9;
             txtPharmacist.DefaultText = "";
             txtPharmacist.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPharmacist.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -256,7 +259,7 @@
             txtPharmacist.PlaceholderText = "اسم الصيدلاني";
             txtPharmacist.RightToLeft = RightToLeft.No;
             txtPharmacist.SelectedText = "";
-            txtPharmacist.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtPharmacist.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtPharmacist.Size = new Size(482, 80);
             txtPharmacist.TabIndex = 10;
             txtPharmacist.TextAlign = HorizontalAlignment.Center;
@@ -266,7 +269,7 @@
             txtPharmacy.Anchor = AnchorStyles.None;
             txtPharmacy.BorderRadius = 8;
             txtPharmacy.BorderThickness = 2;
-            txtPharmacy.CustomizableEdges = customizableEdges5;
+            txtPharmacy.CustomizableEdges = customizableEdges7;
             txtPharmacy.DefaultText = "";
             txtPharmacy.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPharmacy.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -282,7 +285,7 @@
             txtPharmacy.PlaceholderText = "اسم الصيدلية";
             txtPharmacy.RightToLeft = RightToLeft.No;
             txtPharmacy.SelectedText = "";
-            txtPharmacy.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtPharmacy.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtPharmacy.Size = new Size(482, 80);
             txtPharmacy.TabIndex = 11;
             txtPharmacy.TextAlign = HorizontalAlignment.Center;
@@ -290,7 +293,7 @@
             // btnRegister
             // 
             btnRegister.BorderRadius = 8;
-            btnRegister.CustomizableEdges = customizableEdges3;
+            btnRegister.CustomizableEdges = customizableEdges5;
             btnRegister.DisabledState.BorderColor = Color.DarkGray;
             btnRegister.DisabledState.CustomBorderColor = Color.DarkGray;
             btnRegister.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -299,13 +302,33 @@
             btnRegister.Font = new Font("Segoe UI", 10F);
             btnRegister.ForeColor = Color.White;
             btnRegister.HoverState.FillColor = Color.FromArgb(40, 156, 194);
-            btnRegister.Location = new Point(288, 898);
+            btnRegister.Location = new Point(159, 904);
             btnRegister.Name = "btnRegister";
-            btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnRegister.Size = new Size(225, 56);
             btnRegister.TabIndex = 12;
             btnRegister.Text = "إنشاء الحساب";
             btnRegister.Click += btnRegister_Click;
+            // 
+            // btnGeo
+            // 
+            btnGeo.BorderRadius = 8;
+            btnGeo.CustomizableEdges = customizableEdges3;
+            btnGeo.DisabledState.BorderColor = Color.DarkGray;
+            btnGeo.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnGeo.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnGeo.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnGeo.FillColor = Color.FromArgb(10, 126, 164);
+            btnGeo.Font = new Font("Segoe UI", 10F);
+            btnGeo.ForeColor = Color.White;
+            btnGeo.HoverState.FillColor = Color.FromArgb(40, 156, 194);
+            btnGeo.Location = new Point(416, 904);
+            btnGeo.Name = "btnGeo";
+            btnGeo.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnGeo.Size = new Size(225, 56);
+            btnGeo.TabIndex = 13;
+            btnGeo.Text = "تحديد الموقع الجغرافي";
+            btnGeo.Click += btnGeo_Click;
             // 
             // Register
             // 
@@ -313,6 +336,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(800, 996);
+            Controls.Add(btnGeo);
             Controls.Add(btnRegister);
             Controls.Add(txtPharmacy);
             Controls.Add(txtPharmacist);
@@ -349,5 +373,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPharmacy;
         private Guna.UI2.WinForms.Guna2TextBox txtPharmacist;
         private Guna.UI2.WinForms.Guna2Button btnRegister;
+        private Guna.UI2.WinForms.Guna2Button btnGeo;
     }
 }

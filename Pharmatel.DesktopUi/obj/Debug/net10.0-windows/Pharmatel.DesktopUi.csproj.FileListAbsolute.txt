@@ -27,3 +27,13 @@ C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\obj\Debug\ne
 C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\obj\Debug\net10.0-windows\Pharmatel.DesktopUi.Presentation.PrescriptionDetails.resources
 C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\bin\Debug\net10.0-windows\CsvHelper.dll
 C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\obj\Debug\net10.0-windows\Pharmatel.DesktopUi.Presentation.UploadForm.resources
+C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\bin\Debug\net10.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\bin\Debug\net10.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\bin\Debug\net10.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\bin\Debug\net10.0-windows\Microsoft.Web.WebView2.Core.dll
+C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\bin\Debug\net10.0-windows\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\bin\Debug\net10.0-windows\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\bin\Debug\net10.0-windows\Microsoft.Web.WebView2.Core.xml
+C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\bin\Debug\net10.0-windows\Microsoft.Web.WebView2.WinForms.xml
+C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\bin\Debug\net10.0-windows\Microsoft.Web.WebView2.Wpf.xml
+C:\Users\MEDIA\source\repos\Pharmatel.DesktopUi\Pharmatel.DesktopUi\obj\Debug\net10.0-windows\Pharmatel.DesktopUi.Presentation.MapForm.resources

@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net10.0-windows10.0.19041": {
+    "net10.0-windows7.0": {
       "CsvHelper/33.1.0": {
         "type": "package",
         "compile": {
@@ -13,37 +13,6 @@
           "lib/net9.0/CsvHelper.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "GeoCoordinate/2.0.1": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.0"
-        }
-      },
-      "GeoCoordinate.NetCore/1.0.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard1.6/GeoCoordinate.NetCore.dll": {
-            "related": ".deps.json"
-          }
-        },
-        "runtime": {
-          "lib/netstandard1.6/GeoCoordinate.NetCore.dll": {
-            "related": ".deps.json"
-          }
-        }
-      },
-      "GeoCoordinate.NetStandard1/1.0.1": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
-        },
-        "compile": {
-          "lib/netstandard1.1/GeoCoordinate.NetStandard1.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.1/GeoCoordinate.NetStandard1.dll": {}
         }
       },
       "Guna.UI2.WinForms/2.0.4.8": {
@@ -61,19 +30,24 @@
           "Microsoft.WindowsDesktop.App.WindowsForms"
         ]
       },
-      "Microsoft.NETCore.Platforms/1.1.0": {
+      "Microsoft.Web.WebView2/1.0.4129.50": {
         "type": "package",
-        "compile": {
-          "lib/netstandard1.0/_._": {}
+        "build": {
+          "buildTransitive/Microsoft.Web.WebView2.targets": {}
         },
-        "runtime": {
-          "lib/netstandard1.0/_._": {}
-        }
-      },
-      "NETStandard.Library/1.6.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0"
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/WebView2Loader.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/WebView2Loader.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/WebView2Loader.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
         }
       },
       "System.Management/7.0.0": {
@@ -127,44 +101,6 @@
         "lib/netstandard2.1/CsvHelper.xml"
       ]
     },
-    "GeoCoordinate/2.0.1": {
-      "sha512": "Am5GANF7uS3vlYBHExLtouH/Yrsc+6182nTdxXfnYCCVF/mO6TRO5QQhJVWXd5PjVdNnb6rHbkHiDR9verwnig==",
-      "type": "package",
-      "path": "geocoordinate/2.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "geocoordinate.2.0.1.nupkg.sha512",
-        "geocoordinate.nuspec",
-        "src/GeoCoordinate.cs",
-        "src/GeoPosition.cs"
-      ]
-    },
-    "GeoCoordinate.NetCore/1.0.0.1": {
-      "sha512": "VrR5MLkh0u2qka79JcQ/GUrgHwGidayCA7nKy2430qYX/JHdrHLgwp1MuBTSsygWs0s2V6GQ0Hp8HUMatHiWFw==",
-      "type": "package",
-      "path": "geocoordinate.netcore/1.0.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "geocoordinate.netcore.1.0.0.1.nupkg.sha512",
-        "geocoordinate.netcore.nuspec",
-        "lib/netstandard1.6/GeoCoordinate.NetCore.deps.json",
-        "lib/netstandard1.6/GeoCoordinate.NetCore.dll"
-      ]
-    },
-    "GeoCoordinate.NetStandard1/1.0.1": {
-      "sha512": "VNgiwP4L7O968FwKujPdJEmeIuWVw6x8VrrlGi3Yoq1Mh58cNJCMyjc24riUPjsJVYMxVl1y6AKzp8lUuZf5Lg==",
-      "type": "package",
-      "path": "geocoordinate.netstandard1/1.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "geocoordinate.netstandard1.1.0.1.nupkg.sha512",
-        "geocoordinate.netstandard1.nuspec",
-        "lib/netstandard1.1/GeoCoordinate.NetStandard1.dll"
-      ]
-    },
     "Guna.UI2.WinForms/2.0.4.8": {
       "sha512": "fIY3+UIuuxGAPQACC+DRrRS3kkcrdaKGWvjrWoa5AVkjfXjQci34EYr2iMlWchvmzptEiGKE3sqZYmnBvj9JVw==",
       "type": "package",
@@ -187,32 +123,101 @@
         "lib/netcoreapp3.1/Guna.UI2.dll"
       ]
     },
-    "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+    "Microsoft.Web.WebView2/1.0.4129.50": {
+      "sha512": "BuJC70c7SCl8wlvojLZbc/E5ONmGyG3fhAMmpftCpKerxae//TxgKOTELRK2QRD7m7jigNFQRf6cfVT3ZiIQoQ==",
       "type": "package",
-      "path": "microsoft.netcore.platforms/1.1.0",
+      "path": "microsoft.web.webview2/1.0.4129.50",
+      "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/netstandard1.0/_._",
-        "microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-        "microsoft.netcore.platforms.nuspec",
-        "runtime.json"
-      ]
-    },
-    "NETStandard.Library/1.6.1": {
-      "sha512": "WcSp3+vP+yHNgS8EV5J7pZ9IRpeDuARBPN28by8zqff1wJQXm26PVU8L3/fYLBJVU7BtDyqNVWq2KlCVvSSR4A==",
-      "type": "package",
-      "path": "netstandard.library/1.6.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "netstandard.library.1.6.1.nupkg.sha512",
-        "netstandard.library.nuspec"
+        "LICENSE.txt",
+        "NOTICE.txt",
+        "WebView2.idl",
+        "WebView2.tlb",
+        "build/Common.targets",
+        "build/Microsoft.Web.WebView2.targets",
+        "build/WebView2Rules.Project.xml",
+        "build/native/Microsoft.Web.WebView2.targets",
+        "build/native/arm64/WebView2Loader.dll",
+        "build/native/arm64/WebView2Loader.dll.lib",
+        "build/native/arm64/WebView2LoaderStatic.lib",
+        "build/native/include-winrt/WebView2Interop.h",
+        "build/native/include-winrt/WebView2Interop.idl",
+        "build/native/include-winrt/WebView2Interop.tlb",
+        "build/native/include/WebView2.h",
+        "build/native/include/WebView2EnvironmentOptions.h",
+        "build/native/x64/WebView2Loader.dll",
+        "build/native/x64/WebView2Loader.dll.lib",
+        "build/native/x64/WebView2LoaderStatic.lib",
+        "build/native/x86/WebView2Loader.dll",
+        "build/native/x86/WebView2Loader.dll.lib",
+        "build/native/x86/WebView2LoaderStatic.lib",
+        "build/wv2winrt.targets",
+        "buildTransitive/Microsoft.Web.WebView2.targets",
+        "lib/Microsoft.Web.WebView2.Core.winmd",
+        "lib/net462/Microsoft.Web.WebView2.Core.dll",
+        "lib/net462/Microsoft.Web.WebView2.Core.xml",
+        "lib/net462/Microsoft.Web.WebView2.WinForms.dll",
+        "lib/net462/Microsoft.Web.WebView2.WinForms.xml",
+        "lib/net462/Microsoft.Web.WebView2.Wpf.dll",
+        "lib/net462/Microsoft.Web.WebView2.Wpf.xml",
+        "lib_manual/net5.0-windows10.0.17763.0/Microsoft.Web.WebView2.Wpf.dll",
+        "lib_manual/net5.0-windows10.0.17763.0/Microsoft.Web.WebView2.Wpf.xml",
+        "lib_manual/net6.0-windows10.0.17763.0/Microsoft.Web.WebView2.Core.Projection.dll",
+        "lib_manual/net8.0-windows10.0.17763.0/Microsoft.Web.WebView2.Core.Projection.dll",
+        "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll",
+        "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.Core.xml",
+        "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.dll",
+        "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.xml",
+        "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll",
+        "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.xml",
+        "microsoft.web.webview2.1.0.4129.50.nupkg.sha512",
+        "microsoft.web.webview2.nuspec",
+        "runtimes/win-arm64/native/WebView2Loader.dll",
+        "runtimes/win-arm64/native_uap/Microsoft.Web.WebView2.Core.dll",
+        "runtimes/win-x64/native/WebView2Loader.dll",
+        "runtimes/win-x64/native_uap/Microsoft.Web.WebView2.Core.dll",
+        "runtimes/win-x86/native/WebView2Loader.dll",
+        "runtimes/win-x86/native_uap/Microsoft.Web.WebView2.Core.dll",
+        "tools/VisualStudioToolsManifest.xml",
+        "tools/wv2winrt/Antlr3.Runtime.dll",
+        "tools/wv2winrt/Antlr4.StringTemplate.dll",
+        "tools/wv2winrt/System.Buffers.dll",
+        "tools/wv2winrt/System.CommandLine.DragonFruit.dll",
+        "tools/wv2winrt/System.CommandLine.Rendering.dll",
+        "tools/wv2winrt/System.CommandLine.dll",
+        "tools/wv2winrt/System.Memory.dll",
+        "tools/wv2winrt/System.Numerics.Vectors.dll",
+        "tools/wv2winrt/System.Runtime.CompilerServices.Unsafe.dll",
+        "tools/wv2winrt/codegen_util.dll",
+        "tools/wv2winrt/concrt140_app.dll",
+        "tools/wv2winrt/cs/System.CommandLine.resources.dll",
+        "tools/wv2winrt/de/System.CommandLine.resources.dll",
+        "tools/wv2winrt/es/System.CommandLine.resources.dll",
+        "tools/wv2winrt/fr/System.CommandLine.resources.dll",
+        "tools/wv2winrt/it/System.CommandLine.resources.dll",
+        "tools/wv2winrt/ja/System.CommandLine.resources.dll",
+        "tools/wv2winrt/ko/System.CommandLine.resources.dll",
+        "tools/wv2winrt/msvcp140_1_app.dll",
+        "tools/wv2winrt/msvcp140_2_app.dll",
+        "tools/wv2winrt/msvcp140_app.dll",
+        "tools/wv2winrt/pl/System.CommandLine.resources.dll",
+        "tools/wv2winrt/pt-BR/System.CommandLine.resources.dll",
+        "tools/wv2winrt/ru/System.CommandLine.resources.dll",
+        "tools/wv2winrt/tr/System.CommandLine.resources.dll",
+        "tools/wv2winrt/type_hierarchy.dll",
+        "tools/wv2winrt/vcamp140_app.dll",
+        "tools/wv2winrt/vccorlib140_app.dll",
+        "tools/wv2winrt/vcomp140_app.dll",
+        "tools/wv2winrt/vcruntime140_app.dll",
+        "tools/wv2winrt/winrt_winmd.dll",
+        "tools/wv2winrt/winrt_winmd.winmd",
+        "tools/wv2winrt/wv2winrt.exe",
+        "tools/wv2winrt/wv2winrt.exe.config",
+        "tools/wv2winrt/wv2winrt.xml",
+        "tools/wv2winrt/zh-Hans/System.CommandLine.resources.dll",
+        "tools/wv2winrt/zh-Hant/System.CommandLine.resources.dll"
       ]
     },
     "System.Management/7.0.0": {
@@ -245,12 +250,10 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net10.0-windows10.0.19041": [
+    "net10.0-windows7.0": [
       "CsvHelper >= 33.1.0",
-      "GeoCoordinate >= 2.0.1",
-      "GeoCoordinate.NetCore >= 1.0.0.1",
-      "GeoCoordinate.NetStandard1 >= 1.0.1",
-      "Guna.UI2.WinForms >= 2.0.4.8"
+      "Guna.UI2.WinForms >= 2.0.4.8",
+      "Microsoft.Web.WebView2 >= 1.0.4129.50"
     ]
   },
   "packageFolders": {
@@ -275,7 +278,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net10.0-windows10.0.19041.0"
+        "net10.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -283,8 +286,8 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net10.0-windows10.0.19041": {
-          "targetAlias": "net10.0-windows10.0.19041.0",
+        "net10.0-windows7.0": {
+          "targetAlias": "net10.0-windows",
           "projectReferences": {}
         }
       },
@@ -301,28 +304,20 @@
       "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
-      "net10.0-windows10.0.19041": {
-        "targetAlias": "net10.0-windows10.0.19041.0",
+      "net10.0-windows7.0": {
+        "targetAlias": "net10.0-windows",
         "dependencies": {
           "CsvHelper": {
             "target": "Package",
             "version": "[33.1.0, )"
           },
-          "GeoCoordinate": {
-            "target": "Package",
-            "version": "[2.0.1, )"
-          },
-          "GeoCoordinate.NetCore": {
-            "target": "Package",
-            "version": "[1.0.0.1, )"
-          },
-          "GeoCoordinate.NetStandard1": {
-            "target": "Package",
-            "version": "[1.0.1, )"
-          },
           "Guna.UI2.WinForms": {
             "target": "Package",
             "version": "[2.0.4.8, )"
+          },
+          "Microsoft.Web.WebView2": {
+            "target": "Package",
+            "version": "[1.0.4129.50, )"
           }
         },
         "imports": [
@@ -336,17 +331,8 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.Windows.SDK.NET.Ref",
-            "version": "[10.0.19041.57, 10.0.19041.57]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          },
-          "Microsoft.Windows.SDK.NET.Ref.Windows": {
             "privateAssets": "all"
           },
           "Microsoft.WindowsDesktop.App.WindowsForms": {

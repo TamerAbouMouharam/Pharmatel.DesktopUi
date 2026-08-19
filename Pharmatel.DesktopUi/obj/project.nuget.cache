@@ -1,18 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "bX15DKxD+LE=",
+  "dgSpecHash": "v9wgI3KW58U=",
   "success": true,
   "projectFilePath": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MEDIA\\.nuget\\packages\\csvhelper\\33.1.0\\csvhelper.33.1.0.nupkg.sha512",
-    "C:\\Users\\MEDIA\\.nuget\\packages\\geocoordinate\\2.0.1\\geocoordinate.2.0.1.nupkg.sha512",
-    "C:\\Users\\MEDIA\\.nuget\\packages\\geocoordinate.netcore\\1.0.0.1\\geocoordinate.netcore.1.0.0.1.nupkg.sha512",
-    "C:\\Users\\MEDIA\\.nuget\\packages\\geocoordinate.netstandard1\\1.0.1\\geocoordinate.netstandard1.1.0.1.nupkg.sha512",
     "C:\\Users\\MEDIA\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.8\\guna.ui2.winforms.2.0.4.8.nupkg.sha512",
-    "C:\\Users\\MEDIA\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\MEDIA\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
-    "C:\\Users\\MEDIA\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512",
-    "C:\\Users\\MEDIA\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.57\\microsoft.windows.sdk.net.ref.10.0.19041.57.nupkg.sha512"
+    "C:\\Users\\MEDIA\\.nuget\\packages\\microsoft.web.webview2\\1.0.4129.50\\microsoft.web.webview2.1.0.4129.50.nupkg.sha512",
+    "C:\\Users\\MEDIA\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }

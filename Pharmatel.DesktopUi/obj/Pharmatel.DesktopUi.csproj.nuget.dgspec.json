@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net10.0-windows10.0.19041.0"
+          "net10.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,8 +30,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net10.0-windows10.0.19041": {
-            "targetAlias": "net10.0-windows10.0.19041.0",
+          "net10.0-windows7.0": {
+            "targetAlias": "net10.0-windows",
             "projectReferences": {}
           }
         },
@@ -48,28 +48,20 @@
         "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
-        "net10.0-windows10.0.19041": {
-          "targetAlias": "net10.0-windows10.0.19041.0",
+        "net10.0-windows7.0": {
+          "targetAlias": "net10.0-windows",
           "dependencies": {
             "CsvHelper": {
               "target": "Package",
               "version": "[33.1.0, )"
             },
-            "GeoCoordinate": {
-              "target": "Package",
-              "version": "[2.0.1, )"
-            },
-            "GeoCoordinate.NetCore": {
-              "target": "Package",
-              "version": "[1.0.0.1, )"
-            },
-            "GeoCoordinate.NetStandard1": {
-              "target": "Package",
-              "version": "[1.0.1, )"
-            },
             "Guna.UI2.WinForms": {
               "target": "Package",
               "version": "[2.0.4.8, )"
+            },
+            "Microsoft.Web.WebView2": {
+              "target": "Package",
+              "version": "[1.0.4129.50, )"
             }
           },
           "imports": [
@@ -83,17 +75,8 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.Windows.SDK.NET.Ref",
-              "version": "[10.0.19041.57, 10.0.19041.57]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            },
-            "Microsoft.Windows.SDK.NET.Ref.Windows": {
               "privateAssets": "all"
             },
             "Microsoft.WindowsDesktop.App.WindowsForms": {

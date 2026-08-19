@@ -1,12 +1,19 @@
 ﻿using Pharmatel.DesktopUi.Dto;
 using System.Net;
 using System.Net.Http.Json;
-using Windows.Devices.Geolocation;
 
 namespace Pharmatel.DesktopUi.Presentation
 {
     public partial class Register : Form
     {
+        double lat, lng;
+
+        public void SetLatLng(double lat, double lng)
+        {
+            this.lat = lat;
+            this.lng = lng;
+        }
+
         public Register()
         {
             InitializeComponent();
@@ -31,8 +38,6 @@ namespace Pharmatel.DesktopUi.Presentation
                 return;
             }
 
-            (double lat, double lng) = await GetLocation();
-
             RegisterRequest request = new(txtUsername.Text, txtPassword.Text, "PHARMACY", txtEmail.Text, txtPhone.Text, txtPharmacy.Text, txtPharmacist.Text, lat, lng);
 
             HttpRequestMessage message = new(HttpMethod.Post, ApiDomain.Domain + "/auth/register");
@@ -55,27 +60,10 @@ namespace Pharmatel.DesktopUi.Presentation
             this.Close();
         }
 
-        async Task<(double lat, double lng)> GetLocation()
+        private void btnGeo_Click(object sender, EventArgs e)
         {
-            var accessStatus = await Geolocator.RequestAccessAsync();
-            if (accessStatus != GeolocationAccessStatus.Allowed)
-            {
-                //Console.WriteLine("Location access denied or restricted.");
-                return (0, 0);
-            }
-
-            // Create a geolocator with desired accuracy
-            var geolocator = new Geolocator { DesiredAccuracyInMeters = 100 };
-
-            //Console.WriteLine("Getting current location...");
-            Geoposition pos = await geolocator.GetGeopositionAsync();
-
-            // Output coordinates
-
-            return (pos.Coordinate.Point.Position.Latitude, pos.Coordinate.Point.Position.Longitude);
+            new MapForm(this).Show();
         }
-
-
     }
 }
 
