@@ -26,6 +26,8 @@ namespace Pharmatel.DesktopUi.Presentation
             Parent = parent;
 
             GetPrescription();
+
+
         }
 
         private async void GetPrescription()
@@ -86,7 +88,7 @@ namespace Pharmatel.DesktopUi.Presentation
 
             message.Headers.Authorization = new AuthenticationHeaderValue("Bearer", SessionInfo.AuthInfo!.Token);
 
-            message.Content = JsonContent.Create(new { pharmacyId, dose, frequency, startDate, byPharmacist, foodRequirement, note, byDoctor, doctorName, timeShift, isDone});
+            message.Content = JsonContent.Create(new { pharmacyId, dose, frequency, startDate, byPharmacist, foodRequirement, note, byDoctor, doctorName, timeShift, isDone });
 
             HttpResponseMessage response = await new HttpClient().SendAsync(message);
 
@@ -99,6 +101,11 @@ namespace Pharmatel.DesktopUi.Presentation
             Parent.GetPrescriptions();
 
             this.Close();
+        }
+
+        private void PrescriptionDetails_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

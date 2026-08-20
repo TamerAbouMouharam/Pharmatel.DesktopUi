@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pharmatel.DesktopUi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a91f5278fb225bddd3f2caf5ec7f8366c227e748")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c1662bfc04157dddcd8a04fc964cba2aa7a84ae")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pharmatel.DesktopUi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pharmatel.DesktopUi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

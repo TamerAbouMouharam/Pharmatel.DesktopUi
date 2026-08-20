@@ -67,7 +67,7 @@ namespace Pharmatel.DesktopUi.Presentation
 
             HttpResponseMessage response = await new HttpClient().SendAsync(message);
 
-            if(response.StatusCode != System.Net.HttpStatusCode.Created)
+            if (response.StatusCode != System.Net.HttpStatusCode.Created)
             {
                 MessageBox.Show("لم تتم إضافة الوصفة", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -75,6 +75,16 @@ namespace Pharmatel.DesktopUi.Presentation
             Parent.GetPrescriptions();
 
             this.Close();
+
+        }
+
+        private void PrescriptionInfo_Load_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtStartDate_ValueChanged(object sender, EventArgs e)
+        {
 
         }
     }

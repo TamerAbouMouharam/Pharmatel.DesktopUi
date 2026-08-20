@@ -32,6 +32,9 @@ namespace Pharmatel.DesktopUi.Presentation
         private bool IsLastPagePrescriptions { get; set; } = false;
         private string PrescriptionsName { get; set; } = string.Empty;
 
+
+        private string PharmacistName { get; set; } = string.Empty;
+
         public void ResetPages()
         {
             AllMedicinesPage = 0;
@@ -47,13 +50,14 @@ namespace Pharmatel.DesktopUi.Presentation
             GetPharmacyMedicines();
             GetPrescriptions();
 
+
             btnPre.Enabled = false;
             btnPrePharm.Enabled = false;
             btnPrePres.Enabled = false;
 
             foreach (var row in allMedicinesList.Rows)
             {
-                ((DataGridViewRow)row).Height = allMedicinesList.Height / allMedicinesList.Rows.Count;
+                ((DataGridViewRow)row).Height = allMedicinesList.Height / (allMedicinesList.Rows.Count + 1);
             }
 
             foreach (var row in medicineList.Rows)
@@ -93,6 +97,27 @@ namespace Pharmatel.DesktopUi.Presentation
             Pharmacy? pharmacy = await response.Content.ReadFromJsonAsync<Pharmacy>();
 
             this.lblPharmacy.Text = pharmacy!.Name;
+
+            this.PharmacistName = pharmacy.PharmacistName;
+
+            SetLatLng(pharmacy.Lat, pharmacy.Lng);
+
+            foreach (var row in allMedicinesList.Rows)
+            {
+                ((DataGridViewRow)row).Height = allMedicinesList.Height / allMedicinesList.Rows.Count;
+            }
+
+            foreach (var row in medicineList.Rows)
+            {
+                ((DataGridViewRow)row).Height = medicineList.Height / medicineList.Rows.Count;
+            }
+
+            foreach (var row in prescriptionList.Rows)
+            {
+                ((DataGridViewRow)row).Height = prescriptionList.Height / prescriptionList.Rows.Count;
+            }
+
+            GetInfo();
         }
 
         public async void GetMedicines()
@@ -444,6 +469,65 @@ namespace Pharmatel.DesktopUi.Presentation
         private void btnUpload_Click(object sender, EventArgs e)
         {
             new UploadForm(this).Show();
+        }
+
+        double lat, lng;
+
+        public void SetLatLng(double lat, double lng)
+        {
+            this.lat = lat;
+            this.lng = lng;
+        }
+
+        private async void btnSave_Click(object sender, EventArgs e)
+        {
+            if (txtNewPass.Text != string.Empty && txtNewPass.Text != txtConfirmPass.Text)
+            {
+                MessageBox.Show("الرجاء إدخال كلمة المرور وتأكيدها بشكل صحيح", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            string Password = txtNewPass.Text;
+            string Name = txtPharmacy.Text;
+            string PharmacistName = txtPharmacist.Text;
+            double Lat = this.lat, Lng = this.lng;
+
+            HttpRequestMessage message = new(HttpMethod.Put, ApiDomain.Domain + $"/pharmacies/{SessionInfo.AuthInfo.PharmacyId}");
+
+            message.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", SessionInfo.AuthInfo!.Token);
+
+            if(txtNewPass.Text == string.Empty)
+            {
+                message.Content = JsonContent.Create(new { Name, PharmacistName, Lat, Lng });
+            }
+            else
+            {
+                message.Content = JsonContent.Create(new { Password, Name, PharmacistName, Lat, Lng });
+            }
+
+            HttpResponseMessage response = await new HttpClient().SendAsync(message);
+
+            if (response.StatusCode != System.Net.HttpStatusCode.OK)
+            {
+                MessageBox.Show("لم يتم حفظ التعديلات بشكل صحيح", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("تم حفظ التعديلات بشكل صحيح", "تم الحفظ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void GetInfo()
+        {
+            txtUsername.Text = SessionInfo.AuthInfo.Username;
+
+            txtPharmacy.Text = this.lblPharmacy.Text;
+
+            txtPharmacist.Text = this.PharmacistName;
+        }
+
+        private void btnGeoChange_Click(object sender, EventArgs e)
+        {
+            new MapForm(null, this).Show();
         }
     }
 }

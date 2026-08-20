@@ -68,6 +68,7 @@
             txtNote = new Guna.UI2.WinForms.Guna2TextBox();
             txtDoctor = new Guna.UI2.WinForms.Guna2TextBox();
             btnAddPrescription = new Guna.UI2.WinForms.Guna2Button();
+            dateElipse = new Guna.UI2.WinForms.Guna2Elipse(components);
             txtStartDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             SuspendLayout();
             // 
@@ -411,25 +412,31 @@
             btnAddPrescription.Text = "موافق";
             btnAddPrescription.Click += btnAddPrescription_Click;
             // 
+            // dateElipse
+            // 
+            dateElipse.BorderRadius = 8;
+            // 
             // txtStartDate
             // 
             txtStartDate.BorderColor = Color.FromArgb(213, 218, 223);
             txtStartDate.BorderRadius = 8;
             txtStartDate.BorderThickness = 2;
             txtStartDate.Checked = true;
+            txtStartDate.CustomFormat = "yyyy-MM-dd hh:mm tt";
             txtStartDate.CustomizableEdges = customizableEdges1;
             txtStartDate.FillColor = Color.White;
             txtStartDate.FocusedColor = Color.White;
             txtStartDate.Font = new Font("Segoe UI", 9F);
-            txtStartDate.Format = DateTimePickerFormat.Long;
+            txtStartDate.Format = DateTimePickerFormat.Custom;
             txtStartDate.HoverState.BorderColor = Color.FromArgb(213, 218, 223);
             txtStartDate.Location = new Point(98, 384);
             txtStartDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             txtStartDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             txtStartDate.Name = "txtStartDate";
             txtStartDate.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtStartDate.ShowUpDown = true;
             txtStartDate.Size = new Size(482, 68);
-            txtStartDate.TabIndex = 27;
+            txtStartDate.TabIndex = 45;
             txtStartDate.Value = new DateTime(2026, 8, 18, 16, 7, 34, 324);
             // 
             // PrescriptionInfo
@@ -461,6 +468,7 @@
             RightToLeft = RightToLeft.Yes;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "معلومات الوصفة";
+            Load += PrescriptionInfo_Load_2;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -486,6 +494,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtMedicineId;
         private Guna.UI2.WinForms.Guna2TextBox txtPatientId;
         private Guna.UI2.WinForms.Guna2Button btnAddPrescription;
+        private Guna.UI2.WinForms.Guna2Elipse dateElipse;
         private Guna.UI2.WinForms.Guna2DateTimePicker txtStartDate;
     }
 }

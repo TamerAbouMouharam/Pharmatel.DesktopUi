@@ -13,11 +13,13 @@ namespace Pharmatel.DesktopUi.Presentation
     public partial class MapForm : Form
     {
         Register Parent;
-        public MapForm(Register parent)
+        Dashboard ParentDashboard;
+        public MapForm(Register parent, Dashboard parentDashboard)
         {
             InitializeComponent();
 
             this.Parent = parent;
+            ParentDashboard = parentDashboard;
         }
 
         private async void MapForm_Load(object sender, EventArgs e)
@@ -73,7 +75,15 @@ namespace Pharmatel.DesktopUi.Presentation
                 string lat = coords.RootElement.GetProperty("lat").GetString();
                 string lng = coords.RootElement.GetProperty("lng").GetString();
 
-                Parent.SetLatLng(double.Parse(lat), double.Parse(lng));
+                if(Parent != null)
+                {
+                    Parent.SetLatLng(double.Parse(lat), double.Parse(lng));
+                }
+
+                if (ParentDashboard != null)
+                {
+                    ParentDashboard.SetLatLng(double.Parse(lat), double.Parse(lng));
+                }
             }
             catch (Exception ex)
             {

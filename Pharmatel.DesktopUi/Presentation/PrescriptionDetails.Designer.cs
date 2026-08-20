@@ -112,17 +112,19 @@
             txtStartDate.BorderRadius = 8;
             txtStartDate.BorderThickness = 2;
             txtStartDate.Checked = true;
+            txtStartDate.CustomFormat = "yyyy-MM-dd hh:mm tt";
             txtStartDate.CustomizableEdges = customizableEdges3;
             txtStartDate.FillColor = Color.White;
             txtStartDate.FocusedColor = Color.White;
             txtStartDate.Font = new Font("Segoe UI", 9F);
-            txtStartDate.Format = DateTimePickerFormat.Long;
+            txtStartDate.Format = DateTimePickerFormat.Custom;
             txtStartDate.HoverState.BorderColor = Color.FromArgb(213, 218, 223);
             txtStartDate.Location = new Point(96, 384);
             txtStartDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             txtStartDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             txtStartDate.Name = "txtStartDate";
             txtStartDate.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtStartDate.ShowUpDown = true;
             txtStartDate.Size = new Size(482, 68);
             txtStartDate.TabIndex = 44;
             txtStartDate.Value = new DateTime(2026, 8, 18, 16, 7, 34, 324);
@@ -497,6 +499,7 @@
             RightToLeft = RightToLeft.Yes;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PrescriptionDetails";
+            Load += PrescriptionDetails_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|c:\\users\\media\\source\\repos\\pharmatel.desktopui\\pharmatel.desktopui\\presentation\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|solutionrelative:pharmatel.desktopui\\presentation\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|c:\\users\\media\\source\\repos\\pharmatel.desktopui\\pharmatel.desktopui\\presentation\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|solutionrelative:pharmatel.desktopui\\presentation\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\pharmatel.desktopui\\presentation\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|solutionrelative:pharmatel.desktopui\\presentation\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|c:\\users\\media\\source\\repos\\pharmatel.desktopui\\pharmatel.desktopui\\dto\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|solutionrelative:pharmatel.desktopui\\dto\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|c:\\users\\media\\source\\repos\\pharmatel.desktopui\\pharmatel.desktopui\\presentation\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|solutionrelative:pharmatel.desktopui\\presentation\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|c:\\users\\media\\source\\repos\\pharmatel.desktopui\\pharmatel.desktopui\\presentation\\mapform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|solutionrelative:pharmatel.desktopui\\presentation\\mapform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|c:\\users\\media\\source\\repos\\pharmatel.desktopui\\pharmatel.desktopui\\presentation\\mapform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|solutionrelative:pharmatel.desktopui\\presentation\\mapform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|c:\\users\\media\\source\\repos\\pharmatel.desktopui\\pharmatel.desktopui\\dto\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|solutionrelative:pharmatel.desktopui\\dto\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\pharmatel.desktopui\\presentation\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|solutionrelative:pharmatel.desktopui\\presentation\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|c:\\users\\media\\source\\repos\\pharmatel.desktopui\\pharmatel.desktopui\\presentation\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D98A42D5-02AC-F247-6DD3-E5516BBBBB2B}|Pharmatel.DesktopUi\\Pharmatel.DesktopUi.csproj|solutionrelative:pharmatel.desktopui\\presentation\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,82 +30,68 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MapForm.cs",
               "DocumentMoniker": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Presentation\\MapForm.cs",
               "RelativeDocumentMoniker": "Pharmatel.DesktopUi\\Presentation\\MapForm.cs",
               "ToolTip": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Presentation\\MapForm.cs",
               "RelativeToolTip": "Pharmatel.DesktopUi\\Presentation\\MapForm.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwFUAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAAawFUAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-19T17:36:30.756Z",
+              "WhenOpened": "2026-08-20T09:26:35.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthResponse.cs",
+              "DocumentMoniker": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Dto\\AuthResponse.cs",
+              "RelativeDocumentMoniker": "Pharmatel.DesktopUi\\Dto\\AuthResponse.cs",
+              "ToolTip": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Dto\\AuthResponse.cs",
+              "RelativeToolTip": "Pharmatel.DesktopUi\\Dto\\AuthResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-20T09:10:15.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dashboard.cs",
+              "DocumentMoniker": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Presentation\\Dashboard.cs",
+              "RelativeDocumentMoniker": "Pharmatel.DesktopUi\\Presentation\\Dashboard.cs",
+              "ToolTip": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Presentation\\Dashboard.cs",
+              "RelativeToolTip": "Pharmatel.DesktopUi\\Presentation\\Dashboard.cs",
+              "ViewState": "AgIAAAMCAAAAAAAAAAAcwPcBAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T08:59:48.907Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "MapForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Presentation\\MapForm.cs",
-              "RelativeDocumentMoniker": "Pharmatel.DesktopUi\\Presentation\\MapForm.cs",
-              "ToolTip": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Presentation\\MapForm.cs [Design]",
-              "RelativeToolTip": "Pharmatel.DesktopUi\\Presentation\\MapForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-19T17:27:14.218Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Register.cs",
               "DocumentMoniker": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Presentation\\Register.cs",
               "RelativeDocumentMoniker": "Pharmatel.DesktopUi\\Presentation\\Register.cs",
               "ToolTip": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Presentation\\Register.cs",
               "RelativeToolTip": "Pharmatel.DesktopUi\\Presentation\\Register.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAAACwAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAowEAAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-19T15:15:23.687Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-01T08:59:39.924Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Dashboard.cs [Design]",
               "DocumentMoniker": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Presentation\\Dashboard.cs",
               "RelativeDocumentMoniker": "Pharmatel.DesktopUi\\Presentation\\Dashboard.cs",
               "ToolTip": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Presentation\\Dashboard.cs [Design]",
               "RelativeToolTip": "Pharmatel.DesktopUi\\Presentation\\Dashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-19T15:00:58.915Z",
+              "WhenOpened": "2026-08-01T08:57:30.231Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Register.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Presentation\\Register.cs",
-              "RelativeDocumentMoniker": "Pharmatel.DesktopUi\\Presentation\\Register.cs",
-              "ToolTip": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Presentation\\Register.cs [Design]",
-              "RelativeToolTip": "Pharmatel.DesktopUi\\Presentation\\Register.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-19T14:54:51.009Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RegisterRequest.cs",
-              "DocumentMoniker": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Dto\\RegisterRequest.cs",
-              "RelativeDocumentMoniker": "Pharmatel.DesktopUi\\Dto\\RegisterRequest.cs",
-              "ToolTip": "C:\\Users\\MEDIA\\source\\repos\\Pharmatel.DesktopUi\\Pharmatel.DesktopUi\\Dto\\RegisterRequest.cs",
-              "RelativeToolTip": "Pharmatel.DesktopUi\\Dto\\RegisterRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-19T15:10:38.861Z",
-              "EditorCaption": ""
             }
           ]
         }

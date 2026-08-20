@@ -62,7 +62,7 @@ namespace Pharmatel.DesktopUi.Presentation
 
         private void btnGeo_Click(object sender, EventArgs e)
         {
-            new MapForm(this).Show();
+            new MapForm(this, null).Show();
         }
     }
 }
